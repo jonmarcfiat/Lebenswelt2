@@ -1,0 +1,10 @@
+****************************
+
+  Lebenswelt Release Notes: 
+
+****************************
+
+Version 1.0
+
+
+** Start Changelog tracking **

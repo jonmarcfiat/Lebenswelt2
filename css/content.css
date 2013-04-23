@@ -1,0 +1,250 @@
+/*  
+Content Stylesheet
+Theme Name: Lebenswelt
+Theme URI: http://fiatinsight.com
+Version: 1.0
+Author: Andrew Haines & Ben Zumdahl
+Description: Images, pages, posts, etc
+*/
+
+
+
+/*** General ***/
+	
+	.copy {padding: 25px 30px 0px 30px;}
+
+
+
+/*** Images ***/
+	
+	img {
+		max-width: 100%;
+		vertical-align: middle;
+		border: 0;
+		-ms-interpolation-mode: bicubic;
+		}
+		
+	img .border {
+		border-image:url("images/frame.png") 30 repeat;
+		-o-border-image:url("images/frame.png") 30 repeat;
+		-moz-border-image:url("images/frame.png") 30 repeat;
+		-webkit-border-image:url("images/frame.png") 30 repeat;
+		border-width: 30px;
+		}
+
+	.rounded {
+		border-radius: 8px;
+		}
+
+	.inset {
+		box-shadow: inset 0 0 7px 4px rgba(255,255,255,.5);
+		}
+
+	.float-left {
+		float: left;
+		}
+ 
+	.float-right {
+		float: right;
+		}
+
+
+
+/*** Pages ***/
+
+	.pagetitle {
+		padding: .5em 0 .4em;
+		border-top: 3px double #ccc;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 1em;
+		font-size: 1.7em;
+		}
+
+
+
+/*** Posts ***/
+	
+	.post{	
+		background: transparent url('') repeat left top;
+		clear: both;
+		overflow: hidden;
+		}
+
+	.post.sticky {
+		border:5px solid #eee;
+		}
+
+	.post-nav {
+		clear: both;
+		padding:20px 20px 5px 20px;
+		font-size: 11px;
+		position: relative;
+		}
+	
+	.post-nav a,
+	.post-nav a:visited {
+		color: #999;
+		text-decoration: none;
+		}
+
+	.post-nav a:hover {
+		color: #000000;
+		text-decoration: none;
+		}
+
+	.post-nav .previous a {
+		float: left;
+		display: block;
+		padding-left: 24px;
+		background: url(../images/post-nav-previous.png) no-repeat left center;
+		}
+
+	.post-nav .next a {
+		float: right;
+		display:block;
+		padding-right: 24px;
+		text-align: right;
+		background: url(../images/post-nav-next.png) no-repeat right center;
+		}
+
+	.post-header {
+		width: 355px;
+		float: left;
+		display: inline; /* IE HACK */
+		}
+
+	.post-header.post-nothumb {width: 100%;}
+
+	.thumb.left img {margin-right:23px;}
+
+	.thumb img {display:block; margin:0 0 0.8em;}
+
+	.metabar {
+		background: #3F88AD url('') top left no-repeat;
+		padding: 5px 0 5px 50px;
+		margin: 0 0 15px -50px;
+		box-shadow: 0 2px 10px 1px #ccc;
+		opacity: .9;
+		}
+
+	.metabar a {color: #0F2B59;}
+
+	.metabar em {
+		font-family: 'Signika', helvetica, sans-serif;
+		border-left: 0px solid #eee;
+		border-right: 0px solid #eee;
+		background: transparent;
+		color: #fff;
+		font-size: 16px;
+		font-style: normal;
+		padding: 5px 5px;
+		line-height: 2.2em;
+		}
+
+	.post-excerpt {}
+
+	.post-title {margin-bottom: .4em;}
+
+	.post-title h2{
+		font-family: 'Quando', helvetica, sans-serif;
+		font-size: 28px;
+		line-height: 1em;
+		text-transform: none;
+		letter-spacing: -.02em;
+		padding: 0 0 7px;
+		}
+
+	.post-title h2 a {color: #556270;}
+	.post-title h2 a:hover {color: #999; text-decoration: none;}
+
+	.author-info {padding: 15px;}
+
+	.author-info small {color: #999;}
+	
+	.author-info h3{
+		text-transform: capitalize;
+		font-size: 26px;
+		}
+
+	.pic {text-align: left}
+	.pic img {float:left}
+
+	.post-author {margin: 0 0 1em;}
+
+	.author-details {font-size: .85em;}
+
+	.author-descr {display: table; height: 1%;}
+
+	.author,
+	.auxilary a {font-variant: small-caps;}
+
+	.auxilary a {color: #999;}
+
+	.author {padding: 0 10px; background:#fff;}
+
+	.post .entry {
+		margin-bottom: 1em;
+		padding: 1em 0;
+		border-top: 1px solid #eee;
+		}
+
+	.post-footer {
+		height: 0px;
+		padding: 10px 30px 6px;
+		overflow: hidden;
+		font-family:helvetica, arial, sans-serif;
+		border-bottom: 0px solid #ccc;
+		text-shadow: #fff 0 1px 0;
+		font-size: 1em;
+		}
+
+	.post-footer.pfooterdark {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		background: #eee url(../images/box-bgr2.gif) repeat-x top;
+		line-height: 42px;
+		}
+
+	.post-footer a{
+		color: #444;
+		font-variant: small-caps;
+		letter-spacing: 2px;
+		font-family: helvetica, arial, sans-serif;
+		}
+
+	.post-footer .left {line-height: 38px;}
+
+	.post-footer .left span {
+		background: url(../images/comment_count_bg.png) no-repeat center left;
+		font-weight: bold;
+		font-size: 15px;
+		text-align: center;
+		padding: 3px 0 8px 0;
+		width: 33px;
+		margin-right: 6px;
+		display: inline-block;
+		line-height: 32px;
+		text-shadow: #fff 0 1px 0;
+		color: #aaa;
+		}
+
+	.post-footer .right {padding: 9px 0 0;}
+
+	.post-footer .right span {line-height: 21px;}
+
+	.post-footer img {margin: 0 0 0 2px;}
+
+	.tags {font-style: italic; color: #777;font-size: 10px;}
+
+	.widget_tag_cloud .wcontent {font-family:baskerville,"palatino linotype", palatino times;}
+
+	.twitter{
+		background: url(../images/icons/balloon-twitter.png) no-repeat 0px 0px;
+		font-style: italic;
+		display:block;
+		padding-left: 30px;
+		}
+
+	.twitter a{font-style:normal;}
+
+	#sidebar .twitter {margin:1em 0 0;}

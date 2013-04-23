@@ -1,0 +1,43 @@
+/*  
+Theme Name: Lebenswelt
+Theme URI: http://fiatinsight.com
+Version: 1.0
+Author: Andrew Haines & Ben Zumdahl
+Description: Lebenswelt is a high-performance, out-of-the-box solution for any number of website needs.
+*/
+
+/* Get Reset CSS */
+@import url('css/reset.css');
+
+/* Get Universal CSS */
+@import url('css/universals.css');
+
+/* Get Interactive CSS */
+@import url('css/interactive.css');
+
+/* Get Navigation CSS */
+@import url('css/navigation.css');
+
+/* Get Content CSS */
+@import url('css/content.css');
+
+/* Get Layout CSS */
+@import url('css/layout.css');
+
+/* Get Slider CSS */
+@import url('css/slider.css');
+
+/* Get Framework CSS */
+@import url('css/framework.css');
+
+
+/* For WP.org theme repository checklist */
+.alignright {}
+.alignleft {}
+.alignnone {}
+.aligncenter {}
+.avatar {}
+.wp-caption {}
+.gallery {}
+.wp-smiley {}
+

@@ -1,0 +1,14 @@
+****************************
+
+  Lebenswelt Core Release Notes: 
+
+****************************
+
+
+
+Version 1.0
+- First stable release
+
+
+
+** Start Changelog tracking **
