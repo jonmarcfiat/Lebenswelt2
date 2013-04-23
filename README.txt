@@ -1,7 +1,7 @@
 ===============
 Lebenswelt (v.2)
 ===============
-© 2013 Fiat Insight
+2013 Fiat Insight
 Authored by Andrew Haines & Ben Zumdahl
 
 
