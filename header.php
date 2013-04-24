@@ -47,7 +47,7 @@
 
 	<!-- Call the Scripts -->
 
-		<?php get_template_part ('scripts');?>
+		<?php get_template_part ('scripts/scripts');?>
 
 </head><!-- End Head -->
 
