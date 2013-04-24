@@ -1,8 +1,8 @@
 	<?php if ( is_front_page() ) :?>
 	<div id="titlebar-alt">
-		<div id="wrapper">
+		<div class="container grad2">
 			<center><h2 class="whiteout" style="padding-bottom: 0;">Hand-Crafted Websites & Accessories</h2>
-			<p class="lead blackout">Complete solutions starting at $2,500. <a href="/?page_id=540"><span class="whiteout">Get a quote &raquo;</span></a></p></center>
+			<p class="lead blackout">Test solutions starting at $2,500. <a href="/?page_id=540"><span class="whiteout">Get a quote &raquo;</span></a></p></center>
 		</div>
 	</div>
 	<? endif;?>

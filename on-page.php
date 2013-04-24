@@ -21,7 +21,7 @@
 ?>
 	
 	
-<div id="contentcontainer" class="container-fluid fix <?php if(m_pagelines('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
+<div id="contentcontainer" class="container grad1 fix <?php if(m_pagelines('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
 
 	<div id="maincontent" <?php if($full_width_page):?>class="fullwidth span12"<?php endif;?> class="span7">
 		<?php

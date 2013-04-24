@@ -4,6 +4,8 @@
 
 ?>
 
+<div class="container">
+
 <div class="da-slider span12" id="da-slider">
 <div class="da-slide">
 <div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/ethika-politika-slider.jpg" alt="Intentional Design" /></a></div>
@@ -22,3 +24,5 @@
 </div>
 <nav class="da-arrows">
 </nav></div>
+
+</div><!-- end container -->

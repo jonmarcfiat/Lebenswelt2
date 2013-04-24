@@ -19,26 +19,12 @@ Description: Body, header, footer, sidebars, widgets, etc
 		border-bottom: 10px solid #ECBE13;
 		}
 		
+	/* wrapper needs to be deprecated */
 	#wrapper {
 		position:relative;
 		max-width: 1200px;
 		overflow: hidden;
 		margin: 0 auto;
-		}
-
-
-/*** Side Banner ***/
-
-	#side-banner {
-		background-image: url('');
-		background-size: 100%;
-		background-position: 0% 0%;
-		background-repeat: no-repeat;
-		height: 800px;
-		opacity: 1;
-		border-right: 1px solid #555;
-		margin-left: -2px;
-		padding-top: 40px;
 		}
 
 

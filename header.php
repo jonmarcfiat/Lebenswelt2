@@ -62,13 +62,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<body <?php body_class(); ?> data-spy="scroll">
-
-	<!--
-	<aside id="side-banner" class="span2 hidden-phone">
-		<div class="floater" data-spy="affix" data-offset-top="40"><img src="/wp-content/uploads/bgs/ipad-narrow.jpg"></div>
-	</aside>
-	-->
+<body <?php body_class(); ?>>
 
 	<div id="site" class="">
 	

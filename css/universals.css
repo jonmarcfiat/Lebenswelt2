@@ -41,49 +41,48 @@ Description: Styling for universal elements: typography, links, alignment, etc
 
 /* Headers */
 
-	h1 {font-size: 40px;
-		padding: 10px 0px;
-		color: #999;
-		text-shadow: 1px 1px #bbb;
+	h1 {
+		font-size: 28px;
+		padding: 0 0 10px;
 		font-family: 'Quando', helvetica, sans-serif;
+		color: #666;
+		font-weight: 400;
 		line-height: 1.2em;
 		}
 
 	h2 {
-		font-size: 36px;
-		padding: 30px 0px;
-		color: #888;
-		text-shadow: 1px -1px #eee;
-		font-family: 'Signika', helvetica, sans-serif;
-		font-weight: 200;
-		line-height: 1.2em;
+		font-size: 24px;
+		font-family: 'Quando', helvetica, sans-serif;
+		font-weight: 400px;
+		padding: 0 0 5px;
 		}
 
 	h3 {
-		font-size: 28px;
-		padding: 0 0 5px;
+		font-size: 22px;
 		font-family: 'Quando', helvetica, sans-serif;
-		color: #666;
-		font-weight: 200;
-		line-height: 1.2em;
+		font-weight: 400px;
+		padding: 0 0 5px;
 		}
 		
 	h4 {
-		font-size: 22px;
-		font-family: 'Signika', helvetica, sans-serif;
-		color: #bbb;
-		font-weight: 200;
-		line-height: 1.2em;
+		font-size: 20px;
+		font-family: 'Quando', helvetica, sans-serif;
+		font-weight: 400px;
+		padding: 0 0 5px;
 		}
-		
-	h5 {font-size: 1.1em;}
 	
-	h6 {font-size: 18px;
-		padding: 10px 20px;
-		color: #777;
-		font-family: 'Ovo', georgia, serif;
-		font-weight: 200;
-		border-left: 1px solid #ccc;
+	h5 {
+		font-size: 18px;
+		font-family: 'Quando', helvetica, sans-serif;
+		font-weight: 400px;
+		padding: 0 0 5px;
+		}
+	
+	h6 {
+		font-size: 16px;
+		font-family: 'Quando', helvetica, sans-serif;
+		font-weight: 400px;
+		padding: 0 0 5px;
 		}
 
 	h1 small,
@@ -96,7 +95,7 @@ Description: Styling for universal elements: typography, links, alignment, etc
 		font-weight: normal;
 		color: #999999;
 		}
-
+	
 	h1 a, h2 a, h3 a, h4 a, h5 a{}
 	h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {}
 
@@ -119,6 +118,61 @@ Description: Styling for universal elements: typography, links, alignment, etc
 	strong { color: #141414; }
 		
 	em { font-style: italic; }
+	
+	.classic1 {
+		font-size: 40px;
+		padding: 10px 0px;
+		color: #999;
+		text-shadow: 1px 1px #bbb;
+		font-family: 'Quando', helvetica, sans-serif;
+		line-height: 1.2em;
+		}
+	
+	.classic2 {
+		font-size: 36px;
+		padding: 30px 0px;
+		color: #888;
+		text-shadow: 1px -1px #eee;
+		font-family: 'Signika', helvetica, sans-serif;
+		font-weight: 200;
+		line-height: 1.2em;
+		}
+	
+	.classic3 {
+		font-size: 28px;
+		padding: 0 0 5px;
+		font-family: 'Quando', helvetica, sans-serif;
+		color: #666;
+		font-weight: 200;
+		line-height: 1.2em;
+		}
+	
+	.classic4 {
+		font-size: 22px;
+		font-family: 'Signika', helvetica, sans-serif;
+		color: #bbb;
+		font-weight: 200;
+		line-height: 1.2em;
+		}
+	
+	.classic5 {font-size: 1.1em;}	
+		
+	.classic6 {font-size: 18px;
+		padding: 10px 20px;
+		color: #777;
+		font-family: 'Ovo', georgia, serif;
+		font-weight: 200;
+		border-left: 1px solid #ccc;
+		}	
+		
+	.big {
+		font-size: 40px;
+		padding: 20px 0px;
+		color: #999;
+		text-shadow: 1px 1px #bbb;
+		line-height: 1.2em;
+		}	
+		
 		
 	.lead {
 		color: #556270;
