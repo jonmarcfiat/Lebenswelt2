@@ -785,7 +785,15 @@ legend + .control-group {
 
 
 
-/*** Gravity Forms ***/
+	/*** Gravity Forms ***/
+	
+	.field-background {
+		background: #f4f7f7;
+	}
+	
+	.gform_footer {
+		display: block;
+	}
 	
 	ul.gform_fields {
 		list-style: none;
@@ -793,20 +801,31 @@ legend + .control-group {
 		}
 	
 	.gfield {
-		margin: 20px 0;
+		margin: 0px 0;
+		padding: 15px 0;
+		}
+		
+	.gfield p {
+		padding: 0 15px;	
 		}
 
 	label.gfield_label {
-		font-size: 20px;
+		font-size: 18px;
 		color: #666;
 		margin: 0;
+		padding: 0 15px;
 		}
 	
 	.ginput_container {
 		margin: 10px 0 0;
+		padding: 0 15px;
+		}
+		
+	.gform_button {
+		margin: 0 15px;
 		}
 	
-	ul.gfield_radio {
+	ul.gfield_radio, ul.gfield_checkbox {
 		list-style: none;
 		margin: 0;
 		}
@@ -822,6 +841,12 @@ legend + .control-group {
 	#ui-datepicker-div {
 		background: #fff;
 		}
+		
+	.gfield .ginput_complex > span {
+		display: block;
+		margin-bottom: 15px;
+		}
+
 
 
 
