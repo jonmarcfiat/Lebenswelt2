@@ -698,23 +698,23 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
 
 	.span10 {max-width: 1200px;}
 
-	.span9 {max-width: 870px;}
+	.span9 {max-width: 1000px;}
 
-	.span8 {max-width: 770px;}
+	.span8 {max-width: 870px;}
 
-	.span7 {max-width: 750px;}
+	.span7 {max-width: 800px;}
 
-	.span6 {max-width: 570px;}
+	.span6 {max-width: 700px;}
 
-	.span5 {max-width: 450px;}
+	.span5 {max-width: 550px;}
 
-	.span4 {max-width: 370px;}
+	.span4 {max-width: 475px;}
 
-	.span3 {max-width: 360px;}
+	.span3 {max-width: 400px;}
 
-	.span2 {max-width: 270px;}
+	.span2 {max-width: 250px;}
  
-	.span1 {max-width: 70px;}
+	.span1 {max-width: 100px;}
 
 
 	[class*="span"] {
