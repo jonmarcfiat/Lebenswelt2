@@ -1,6 +1,6 @@
 <?php
 
-update_option('siteurl','http://andrew.fiatinsight.com'); update_option('home','http://andrew.fiatinsight.com');
+// update_option('siteurl','http://andrew.fiatinsight.com'); update_option('home','http://andrew.fiatinsight.com');
 
 // Theme Initialization for Lebenswelt 
 
