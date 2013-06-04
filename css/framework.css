@@ -177,6 +177,10 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
   visibility: hidden;
 }
 
+.borderbox {
+  box-sizing: border-box;
+}
+
 
 /* =======================================
      Responsive Calibration (Media Calls)
