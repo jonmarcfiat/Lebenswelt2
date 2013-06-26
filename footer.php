@@ -114,8 +114,8 @@
 
 <!-- Footer Scripts Go Here -->
 	<?php if (pagelines('footerscripts')) echo pagelines('footerscripts');?>
-	<script src="/wp-content/themes/LebensweltCore/js/main.js"></script>
-	<script src="/wp-content/themes/LebensweltCore/js/modernizr.custom.28468.js"></script>
+	<script src="/wp-content/themes/Lebenswelt2/js/main.js"></script>
+	<script src="/wp-content/themes/Lebenswelt2/js/modernizr.custom.28468.js"></script>
 
 <!-- End Footer scripts -->
 <?php wp_footer(); ?>
