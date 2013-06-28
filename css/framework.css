@@ -84,7 +84,6 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
 	/*** Containers & Wrappers ***/
 
 .container {
-  position: relative;
   overflow: visible;
   margin: 0 auto;
 }
