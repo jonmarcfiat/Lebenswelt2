@@ -76,19 +76,15 @@
 	<!-- ####### -- Banner -- ####### -->
 	<?php get_template_part ('banner');?>
 
-
 	<!-- ####### -- TitleBar -- ####### -->
 	<?php get_template_part ('titlebar');?>
 
+	<!-- ####### -- Navigation -- ####### -->
+	<?php get_template_part ('navigation');?>
 
-			<!-- ####### -- Navigation -- ####### -->
-			<?php get_template_part ('navigation');?>
-
-
-			<!-- ####### -- Main Slider -- ####### -->
-			<?php get_template_part ('main-slider');?>
+	<!-- ####### -- Main Slider -- ####### -->
+	<?php get_template_part ('main-slider');?>
 
 
-
-		<!-- MAIN CONTENT -->
+	<!-- MAIN CONTENT -->
 
