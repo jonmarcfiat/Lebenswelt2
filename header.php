@@ -71,14 +71,10 @@
 	<?php get_template_part ('titlebar');?>
 
 
-			<!-- ####### -- Navigation -- ####### -->
-			<?php get_template_part ('navigation');?>
-
-
-			<!-- ####### -- Main Slider -- ####### -->
-			<?php get_template_part ('main-slider');?>
+	<!-- ####### -- Navigation -- ####### -->
+	<?php get_template_part ('navigation');?>
 
 
 
-		<!-- MAIN CONTENT -->
+	<!-- MAIN CONTENT -->
 
