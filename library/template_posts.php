@@ -19,7 +19,7 @@
 ?>
 	
 	
-<div id="contentcontainer" class="container-fluid fix <?php if(m_pagelines('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
+<div id="contentcontainer" class="grad1 container fix <?php if(m_pagelines('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
 
 
 		<?php if(!is_page_template('page-highlight.php') && !is_404()) get_template_part('library/_sub_head');?>
