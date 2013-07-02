@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="container">
+<div class="grad1 container">
 
 <div class="da-slider span12" id="da-slider">
 <div class="da-slide">
