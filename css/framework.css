@@ -177,6 +177,7 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
 }
 
 .borderbox {
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
