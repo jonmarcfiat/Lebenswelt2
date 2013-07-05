@@ -73,6 +73,9 @@
 
 	<!-- ####### -- Navigation -- ####### -->
 	<?php get_template_part ('navigation');?>
+	
+	<!-- ####### -- Main Slider -- ####### -->
+	<?php get_template_part ('main-slider');?>
 
 
 
