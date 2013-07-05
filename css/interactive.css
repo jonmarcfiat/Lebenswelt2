@@ -3441,6 +3441,31 @@ a.badge:hover {
   color: #ffffff;
 }
 
+/*** Carousel Fade alternative to slide  ***/
+
+.carousel-fade .item {
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+	}
+
+.carousel-fade .active {
+	opacity: 1;
+	}
+
+.carousel-fade .active.left,
+.carousel-fade .active.right {
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+	}
+
+.carousel-fade .next.left,
+.carousel-fade .prev.right {
+	opacity: 1;
+	}
 
 
 /*** Heros ***/

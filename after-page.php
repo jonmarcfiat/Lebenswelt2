@@ -13,10 +13,11 @@
 
 	if (is_home())
 		get_template_part('entities/slider');
-*/
 
 	if (is_page('home'))
 		get_template_part('entities/slider')
+
+*/
 
 ?>
 

@@ -1,28 +1,17 @@
 <?php ?>	
 
-	<!-- CSlider Javascript -->
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/wp-content/themes/Lebenswelt2/js/jquery.cslider.js"></script>
-		<script type="text/javascript">
-			$(function() {
-			
-				$('#da-slider').cslider({
-					autoplay	: true,
-					interval    : 6000,
-					bgincrement	: 450
-				});
-			
-			});
-		</script>
-
-
 	<!-- Call Bootstrap Javascript -->
 
 		<script src="/wp-content/themes/Lebenswelt2/js/bootstrap.js"></script>
 		<script src="/wp-content/themes/Lebenswelt2/js/modernizr.js"></script>
+	
+	<!-- Bootstrap Carousel Slider Initilization -->
 
-
+		<script>
+		$(function(){
+ 		 $('#myCarousel').carousel();
+		});
+		</script>
 
 	<!-- Javascript modifications for WordPress-powered menus in Bootstrap -->
 

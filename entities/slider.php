@@ -1,28 +1,26 @@
 <?php
 	
-// This is the slider entity
+/* This is the slider entity
+
+Make sure to upload new slides to /wp-content/uploads/ for ease of client replacement
+
+*/
 
 ?>
 
 <div class="grad1 container">
 
-<div class="da-slider span12" id="da-slider">
-<div class="da-slide">
-<div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/ethika-politika-slider.jpg" alt="Intentional Design" /></a></div>
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><img src="../wp-content/uploads/slide1.jpg" /></a></div>
+    <div class="item"><img src="../wp-content/uploads/slide2.jpg" /></div>
+    <div class="item"><img src="../wp-content/uploads/slide3.jpg" /></div>
+    <!--<div class="item"><img src="../wp-content/uploads/slide3.jpg" /><div class="carousel-caption"><h4>Optional Caption</h4></div></div>-->
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
-<div class="da-slide">
-<div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/cleveland-mixer-slider.jpg" alt="Industrial Design" /></a></div>
-</div>
-<div class="da-slide">
-<div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/barque-solutions-slider.jpg" alt="Commercial Design" /></a></div>
-</div>
-<div class="da-slide">
-<div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/kingston-royce-slider.jpg" alt="Premier Design" /></a></div>
-</div>
-<div class="da-slide">
-<div class="da-img"><a href="#"><img src="../wp-content/uploads/slider/st-timothy-slider.jpg" alt="Parish Design" /></a></div>
-</div>
-<nav class="da-arrows">
-</nav></div>
 
 </div><!-- end container -->

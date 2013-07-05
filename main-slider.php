@@ -41,22 +41,23 @@
 
 <!-- ####### -- Auto Slider -- ####### -->
 
-	<?php if( is_page(array('x')) ) :?>
-		<div id="da-slider" class="da-slider span12">
-			<div class="da-slide">
-				<div class="da-img"><a href="#"><img src="../wp-content/uploads/sites/banner/ssm-banner.jpg" alt="St. Stephen Martyr Catholic Church" /></a></div>
+<?php if( is_page(array('x')) ) :?>
+	<div class="container">
+	
+		<div id="myCarousel" class="carousel slide">
+  		<!-- Carousel items -->
+			<div class="carousel-inner">
+			    <div class="active item"><img src="../wp-content/uploads/slide1.jpg" /></a></div>
+			    <div class="item"><img src="../wp-content/uploads/slide2.jpg" /></div>
+			    <div class="item"><img src="../wp-content/uploads/slide3.jpg" /></div>
+		    	    <!--<div class="item"><img src="../wp-content/uploads/slide3.jpg" /><div class="carousel-caption"><h4>Optional Caption</h4></div></div>-->
 			</div>
-			<div class="da-slide">
-				<div class="da-img"><a href="#"><img src="../wp-content/uploads/sites/banner/ylf-banner.jpg" alt="Youth Leadership Foundation" /></a></div>
-			</div>
-			<div class="da-slide">
-				<div class="da-img"><a href="#"><img src="../wp-content/uploads/sites/banner/stars-banner.jpg" alt="St. Thomas Aquinas Regional School" /></a></div>
-			</div>
-			<nav class="da-arrows">
-				<span class="da-arrows-prev"></span>
-				<span class="da-arrows-next"></span>
-			</nav>
+ 		 <!-- Carousel nav -->
+ 		 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		 <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
-	<?php endif;?>
+
+	</div><!-- end container -->
+<?php endif;?>
 
 <!-- end Auto Slider -->
