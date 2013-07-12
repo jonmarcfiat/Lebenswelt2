@@ -11,16 +11,13 @@
 
 	List conditional calls to entities below, for example:
 
-	if (is_home())
-		get_template_part('entities/slider');
-
-	if (is_page('home'))
-		get_template_part('entities/slider')
-		
-	if (is_page('home'))
-		get_template_part('entities/homepage')		
-
 */
+
+	if (is_front_page())
+		get_template_part('entities/slider');
+	
+	if (is_front_page())
+		get_template_part('entities/brand');	
 
 ?>
 
