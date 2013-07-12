@@ -22,7 +22,7 @@ function feature_script(){?>
 		<?php 
 			global $post;
 			
-			$features = pagelines('features'); 
+			$features = lebenswelt('features'); 
 			
 			if(isset($feature['page'])) echo 'hello';
 			
@@ -36,16 +36,16 @@ function feature_script(){?>
 		?>
 	//Feature Cycle Setup	
 			$j('#cycle').cycle({ 
-			    fx: '<?php if(pagelines('feffect')):?><?php echo pagelines('feffect');?><?php else:?>fade<?php endif;?>',
-				sync: <?php if(pagelines('fremovesync')):?>0<?php else:?>1<?php endif;?>,
-				timeout: <?php if(pagelines('timeout')):?><?php echo pagelines('timeout');?><?php else:?>0<?php endif;?>,
-			    speed:  <?php if(pagelines('fspeed')):?><?php echo pagelines('fspeed');?><?php else:?>1500<?php endif;?>, 
+			    fx: '<?php if(lebenswelt('feffect')):?><?php echo lebenswelt('feffect');?><?php else:?>fade<?php endif;?>',
+				sync: <?php if(lebenswelt('fremovesync')):?>0<?php else:?>1<?php endif;?>,
+				timeout: <?php if(lebenswelt('timeout')):?><?php echo lebenswelt('timeout');?><?php else:?>0<?php endif;?>,
+			    speed:  <?php if(lebenswelt('fspeed')):?><?php echo lebenswelt('fspeed');?><?php else:?>1500<?php endif;?>, 
 				pager:  '#featurenav',
 				cleartype:  true,
     			cleartypeNoBg:  true
 			 });
 			
-		<?php if(pagelines('feature_nav_type') == 'names'):?>	
+		<?php if(lebenswelt('feature_nav_type') == 'names'):?>	
 		//Overide page numbers on cycle feature with custom text
 			$j("div#featurenav").children("a").each(function() {
 				<?php $count = 1;?>
@@ -58,7 +58,7 @@ function feature_script(){?>
 			});
 		<?php endif;?>
 		
-		<?php if(pagelines('feature_nav_type') == 'thumbs'):?>	
+		<?php if(lebenswelt('feature_nav_type') == 'thumbs'):?>	
 		//Overide page numbers on cycle feature with custom text
 			$j("div#featurenav").children("a").each(function() {
 				<?php $count = 1;?>
@@ -71,7 +71,7 @@ function feature_script(){?>
 			});
 		<?php endif;?>
 		
-		<?php if(pagelines('feature_playpause')):?>	
+		<?php if(lebenswelt('feature_playpause')):?>	
 		// Play Pause
 			$j('.playpause').click(function() { 
 				if ($j(this).hasClass('pause')) {

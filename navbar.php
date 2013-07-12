@@ -84,7 +84,7 @@
 
 <!--
 <?php function nav_fallback() {?>
-	<ul id="menu-nav" class="<?php if(pagelines('enable_drop_down')) echo 'mnav dropdown fix'; else echo 'mnav fix';?>">
+	<ul id="menu-nav" class="<?php if(lebenswelt('enable_drop_down')) echo 'mnav dropdown fix'; else echo 'mnav fix';?>">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
 	</ul>
 		<?php	}  if(function_exists('wp_nav_menu')):?>

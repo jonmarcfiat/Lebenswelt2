@@ -18,5 +18,5 @@
 		<li><span class="last">&nbsp;</a></li>
 	</ul>
 	
-	<?php if(!is_page_template('page-highlight.php') && !pagelines('hidesearch')) get_template_part ('library/_searchform'); ?>
+	<?php if(!is_page_template('page-highlight.php') && !lebenswelt('hidesearch')) get_template_part ('library/_searchform'); ?>
 </div><!-- /sub nav -->

@@ -13,7 +13,7 @@
 	and responsive design.
 */
 
-	global $pagelines_ID; 
+	global $lebenswelt_ID; 
 	
 	if(is_page_template('page-fullwidth.php')) $full_width_page = true;
 	else $full_width_page = false;
@@ -21,7 +21,7 @@
 ?>
 	
 	
-<div id="contentcontainer" class="container grad1 fix <?php if(m_pagelines('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
+<div id="contentcontainer" class="container grad1 fix <?php if(m_lebenswelt('sidebar_layout', $post->ID) == 'left') echo 'sidebar_left';?>"> 
 
 	<div id="maincontent" <?php if($full_width_page):?>class="fullwidth span12"<?php endif;?> class="span7">
 		<?php

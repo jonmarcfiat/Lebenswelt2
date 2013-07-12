@@ -3,11 +3,11 @@
 // WELCOME WIDGET
 
 if (class_exists('WP_Widget')) {
-	class PageLines_Welcome extends WP_Widget {
+	class Lebenswelt_Welcome extends WP_Widget {
 	
-	   function PageLines_Welcome() {
+	   function Lebenswelt_Welcome() {
 		   $widget_ops = array('description' => 'This widget places a welcome message with latest tweet in your sidebar; values for this are set in theme options.' );
-		   parent::WP_Widget(false, $name = __('PageLines - Welcome', TDOMAIN), $widget_ops);    
+		   parent::WP_Widget(false, $name = __('Lebenswelt - Welcome', TDOMAIN), $widget_ops);    
 	   }
 	
 	   function widget($args, $instance) {        
@@ -28,7 +28,7 @@ if (class_exists('WP_Widget')) {
 	   }
 	
 	} 
-	register_widget('PageLines_Welcome');
+	register_widget('Lebenswelt_Welcome');
 }
 
 

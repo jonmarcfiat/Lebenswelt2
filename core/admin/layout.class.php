@@ -1,6 +1,6 @@
 <?php
 
-class PageLinesLayout {
+class LebensweltLayout {
 
 	// BUILD THE PAGELINES OBJECT
 		function __construct() {
@@ -113,17 +113,17 @@ class PageLinesLayout {
 //********* END OF LAYOUT CLASS *********//
 
 
-// PageLines function returns attributes from layout class
+// Lebenswelt function returns attributes from layout class
 
-function pagelines_layout($field, $att = null){
-	$pagelines_layout = new PageLinesLayout;
+function lebenswelt_layout($field, $att = null){
+	$lebenswelt_layout = new LebensweltLayout;
 	
 	
 	if(isset($att)){
-		return $pagelines_layout->$field->$att;
-	}elseif($pagelines_layout->$field){
-		return $pagelines_layout->$field;	
-	}else print_r($pagelines_layout);
+		return $lebenswelt_layout->$field->$att;
+	}elseif($lebenswelt_layout->$field){
+		return $lebenswelt_layout->$field;	
+	}else print_r($lebenswelt_layout);
 }
 
 

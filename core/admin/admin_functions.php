@@ -1,94 +1,94 @@
 <?php 
 
 //Saving hook for options -- Takes post data and sends it to the appended filename ( after admin_post_ )
-add_action('admin_post_pagelines_save', 'pagelines_save');
+add_action('admin_post_lebenswelt_save', 'lebenswelt_save');
 
-function pagelines_save(){
-	$pagelines = new Options;
+function lebenswelt_save(){
+	$lebenswelt = new Options;
 	$pageaction = '';
 
-	if($_POST['pagelines_form'] == "feature_form"){
-		$setup_page = 'admin.php?page=pagelines_feature';
+	if($_POST['lebenswelt_form'] == "feature_form"){
+		$setup_page = 'admin.php?page=lebenswelt_feature';
 		
 		if(isset($_POST['restore_default_feature'])){
 
-			$pagelines->restore_features();		
+			$lebenswelt->restore_features();		
 			$pageaction = "featuresrestored";
 
 		}elseif(isset($_POST['restore_feature_backup'])){
 
-			$pagelines->restore_features_from_backup();
+			$lebenswelt->restore_features_from_backup();
 			wp_redirect(admin_url($setup_page.'&pageaction=restoredfrombackup&selectedtab=' . $_POST['selectedtab']));
 			$pageaction = "featuresrestoredfrombackup";
 		
 		}elseif(isset($_POST['backup_feature'])){
 
-			$pagelines->backup_features($_POST);
+			$lebenswelt->backup_features($_POST);
 			$pageaction = "featuresbackup";
 
 		}elseif(isset($_POST['delete_feature_slide'])){
 		
 			$delete_slide_no = key($_POST['delete_feature_slide']);
 			unset($_POST['feature'][$delete_slide_no]);
-			$pagelines->save_features($_POST);
+			$lebenswelt->save_features($_POST);
 			$pageaction = "deleteslide";
 		
 		}elseif(isset($_POST['newslide'])){
 
 			$_POST['feature'][] = array();
-			$pagelines->save_features($_POST);
+			$lebenswelt->save_features($_POST);
 			$pageaction = "newslide";
 		
 		}elseif(isset($_POST['delete_feature_box'])){
 		
 			$delete_box_no = key($_POST['delete_feature_box']);
 			unset($_POST['fbox'][$delete_box_no]);
-			$pagelines->save_features($_POST);
+			$lebenswelt->save_features($_POST);
 			$pageaction = "deletebox";
 		
 		}elseif(isset($_POST['newfbox'])){
 
 			$_POST['fbox'][] = array();
-			$pagelines->save_features($_POST);
+			$lebenswelt->save_features($_POST);
 			$pageaction = "newbox";
 		
 		}elseif(isset($_POST['submit'])){	
 
-			$pagelines->save_features($_POST);
+			$lebenswelt->save_features($_POST);
 			$pageaction = "featuresupdated";
 		
 		}
 	}else{
 		
-		$setup_page = 'admin.php?page=pagelines';
+		$setup_page = 'admin.php?page=lebenswelt';
 	
 		if(isset($_POST['restore_default_option'])){
 
-			$pagelines->restore_options();
+			$lebenswelt->restore_options();
 			$pageaction = 'optionrestored';
 
 		}elseif(isset($_POST['restore_option_backup'])){
 
-			$pagelines->restore_from_backup();
+			$lebenswelt->restore_from_backup();
 			$pageaction = 'optionrestoredfrombackup';
 
 		}elseif(isset($_POST['backup_option'])){
 
-			$pagelines->backup_options($_POST);
+			$lebenswelt->backup_options($_POST);
 			$pageaction = 'optionbackup';
 
 		}elseif(isset($_POST['resetlayout'])){
-			global $pagelines_layout;
-			$pagelines_layout->reset_layout_to_default();
+			global $lebenswelt_layout;
+			$lebenswelt_layout->reset_layout_to_default();
 			$pageaction = 'layoutreset';
 		}elseif(isset($_POST['resettemplates'])){
 			
-			PageLinesTemplate::reset_templates_to_default();
+			LebensweltTemplate::reset_templates_to_default();
 			$pageaction = 'templatereset';
 		}elseif(isset($_POST['submit'])){
 			//echo '<pre>';print_r($_POST['layout']);echo '</pre>';
-			$pagelines->update_options_from_array(get_option_array());
-			$pagelines->save_options();
+			$lebenswelt->update_options_from_array(get_option_array());
+			$lebenswelt->save_options();
 			$pageaction = 'optionsupdated';
 		}
 	}
@@ -102,14 +102,14 @@ function get_option_header($option_type, $intro, $save_button = 'Save'){?>
 	<div class='wrap'>
 		<table id="optionstable"><tbody><tr><td valign="top" width="100%">
 			
-		  <form method="post" action="<?php echo admin_url('admin-post.php?action=pagelines_save'); ?>">
+		  <form method="post" action="<?php echo admin_url('admin-post.php?action=lebenswelt_save'); ?>">
 			  
 				 <!-- hidden fields -->
 					<?php wp_nonce_field('update-options') ?>
 					
-					<input type="hidden" name="pagelines_form" id="pagelines_form" value="<?php echo $option_type;?>_form" />	
+					<input type="hidden" name="lebenswelt_form" id="lebenswelt_form" value="<?php echo $option_type;?>_form" />	
 					
-					<input type="hidden" name="action" value="pagelines_save" /> <!-- the function we execute to process -->
+					<input type="hidden" name="action" value="lebenswelt_save" /> <!-- the function we execute to process -->
 				
 					<?php if(isset($_GET['pageaction'])):?>
 							<?php $a = $_GET['pageaction'];?>
@@ -191,7 +191,7 @@ function get_option_header($option_type, $intro, $save_button = 'Save'){?>
 									<?php echo $intro;?>
 								</div>
 
-								<!-- Pagelines Link -->
+								<!-- Lebenswelt Link -->
 								<a class="optionsheader_plink" href="http://fiatinsight.com" target="_blank">&nbsp;</a>
 							</div>
 						
@@ -202,8 +202,8 @@ function get_option_header($option_type, $intro, $save_button = 'Save'){?>
 								<div class="padding fix">
 									<div class="subheader_links">
 										<?php if(!VPRO):?>
-											<a class="sh_pro" href="http://www.pagelines.com/themes/<?php echo strtolower(THEMENAME).'pro';?>/"><?php _e('Get ', TDOMAIN);?> <?php echo THEMENAME;?>Pro</a>
-											<a class="sh_pro" href="http://www.pagelines.com/demos/<?php echo strtolower(THEMENAME).'pro';?>/"><?php echo THEMENAME;?>Pro <?php _e('Demo', TDOMAIN);?> </a>
+											<a class="sh_pro" href="http://www.lebenswelt.com/themes/<?php echo strtolower(THEMENAME).'pro';?>/"><?php _e('Get ', TDOMAIN);?> <?php echo THEMENAME;?>Pro</a>
+											<a class="sh_pro" href="http://www.lebenswelt.com/demos/<?php echo strtolower(THEMENAME).'pro';?>/"><?php echo THEMENAME;?>Pro <?php _e('Demo', TDOMAIN);?> </a>
 										<?php else:?>
 											<a class="sh_forum" href="http://fiatinsight.com/clients/"><?php _e('Clients Area', TDOMAIN);?></a>
 										<?php endif;?>
@@ -277,7 +277,7 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 				<input type="hidden" class="image_preview_size" name="img_size_<?php echo $optionname;?>" value="<?php echo $option_atts['img_width'];?>"/>
 			</p>
 			<?php if($optionvalue):?>
-				<img class="pagelines_image_preview" id="image_<?php echo $optionname;?>" src="<?php echo $optionvalue;?>" style="width:<?php echo $option_atts['img_width'];?>px"/>
+				<img class="lebenswelt_image_preview" id="image_<?php echo $optionname;?>" src="<?php echo $optionvalue;?>" style="width:<?php echo $option_atts['img_width'];?>px"/>
 			<?php endif;?>
 			
 		
@@ -289,7 +289,7 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 			
 				<?php foreach($option_atts['selectvalues'] as $multi_optionid => $multi_o):?>
 				<p>
-					<label for="<?php echo $multi_optionid;?>" class="context"><input class="admin_checkbox" type="checkbox" id="<?php echo $multi_optionid;?>" name="<?php echo $multi_optionid;?>" <?php if(pagelines($multi_optionid)) echo 'checked'; else echo 'unchecked';?> /><?php echo $multi_o['inputlabel'];?></label>
+					<label for="<?php echo $multi_optionid;?>" class="context"><input class="admin_checkbox" type="checkbox" id="<?php echo $multi_optionid;?>" name="<?php echo $multi_optionid;?>" <?php if(lebenswelt($multi_optionid)) echo 'checked'; else echo 'unchecked';?> /><?php echo $multi_o['inputlabel'];?></label>
 				</p>
 				<?php endforeach;?>		
 		<?php elseif($optiontype == 'text_small'):?>
@@ -341,12 +341,12 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 						<?php
 								
 							
-						global $pagelines_layout;
+						global $lebenswelt_layout;
 						foreach(get_the_layouts() as $layout):
 						?>
 						<div class="layout-select-item">
-							<span class="layout-image-border <?php if($pagelines_layout->layout_map['saved_layout'] == $layout) echo 'selectedlayout';?>"><span class="layout-image <?php echo $layout;?>">&nbsp;</span></span>
-							<input type="radio" class="layoutinput" name="layout[saved_layout]" value="<?php echo $layout;?>" <?php if($pagelines_layout->layout_map['saved_layout'] == $layout) echo 'checked';?>>
+							<span class="layout-image-border <?php if($lebenswelt_layout->layout_map['saved_layout'] == $layout) echo 'selectedlayout';?>"><span class="layout-image <?php echo $layout;?>">&nbsp;</span></span>
+							<input type="radio" class="layoutinput" name="layout[saved_layout]" value="<?php echo $layout;?>" <?php if($lebenswelt_layout->layout_map['saved_layout'] == $layout) echo 'checked';?>>
 						</div>
 						<?php endforeach;?>
 					
@@ -363,12 +363,12 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 							<?php
 
 
-							global $pagelines_layout;
+							global $lebenswelt_layout;
 							foreach(get_the_layouts() as $layout):
 							?>
 							<div class="layout-select-item">
-								<span class="layout-image-border <?php if($pagelines_layout->layout_map['last_edit'] == $layout) echo 'selectedlayout';?>"><span class="layout-image <?php echo $layout;?>">&nbsp;</span></span>
-								<input type="radio" class="layoutinput" name="layout[last_edit]" value="<?php echo $layout;?>" <?php if($pagelines_layout->layout_map['last_edit'] == $layout) echo 'checked';?>>
+								<span class="layout-image-border <?php if($lebenswelt_layout->layout_map['last_edit'] == $layout) echo 'selectedlayout';?>"><span class="layout-image <?php echo $layout;?>">&nbsp;</span></span>
+								<input type="radio" class="layoutinput" name="layout[last_edit]" value="<?php echo $layout;?>" <?php if($lebenswelt_layout->layout_map['last_edit'] == $layout) echo 'checked';?>>
 							</div>
 							<?php endforeach;?>
 
@@ -378,7 +378,7 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 					
 				foreach(get_the_layouts() as $layout):
 				
-				$buildlayout = new PageLinesLayout($layout);
+				$buildlayout = new LebensweltLayout($layout);
 						
 					?>
 				<div class="layouteditor <?php echo $layout;?> <?php if($buildlayout->layout_map['last_edit'] == $layout) echo 'selectededitor';?>">
@@ -442,7 +442,7 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 		</div>
 		<?php elseif($optiontype == 'templates'):?>
 			<?php 
-				global $pagelines_template;
+				global $lebenswelt_template;
 				
 			?>
 		
@@ -458,7 +458,7 @@ function option_engine( $optiontype, $optionname, $optionvalue = null, $optionti
 			
 			<br/><br/>
 			<?php 
-			foreach($pagelines_template->template_map as $template => $tfield):
+			foreach($lebenswelt_template->template_map as $template => $tfield):
 			
 				global $pl_section_factory;
 				$available_sections = $pl_section_factory->sections;
@@ -610,12 +610,12 @@ function pl_action_confirm($name, $text){ ?>
 
 
 /*-----------------------------------------------------------------------------------*/
-/* Ajax Save Action - pagelines_ajax_callback */
+/* Ajax Save Action - lebenswelt_ajax_callback */
 /*-----------------------------------------------------------------------------------*/
 
-add_action('wp_ajax_pagelines_ajax_post_action', 'pagelines_ajax_callback');
+add_action('wp_ajax_lebenswelt_ajax_post_action', 'lebenswelt_ajax_callback');
 
-function pagelines_ajax_callback() {
+function lebenswelt_ajax_callback() {
 	global $wpdb; // this is how you get access to the database
 	
 	if($_POST['type']){

@@ -158,7 +158,7 @@ function get_default_features(){
 					'name'=>'Feature 2'
 		    ),
 			'3' => array(
-				 	'title' => '<h3 class="fsub">Wordpress Theme By</h3><h1 class="ftitle">PageLines</h1>',
+				 	'title' => '<h3 class="fsub">Wordpress Theme By</h3><h1 class="ftitle">Lebenswelt</h1>',
 		        	'text' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis molestie nunc. Vivamus molestie, quam vitae pharetra  at ultricies tortor quam sed ante.</p>',
 		        	'media' => '<img src="'.THEME_IMAGES.'/feature2.jpg" />',
 		        	'link' => '#url_goes_here',
@@ -167,7 +167,7 @@ function get_default_features(){
 					'name'=>'Feature 3'
 		    ),
 			'4' => array(
-		        	'title' => '<h3 class="fsub">PageLines\' Shortcodes</h3><h1 class="ftitle">Dynamic<br/>Features</h1>',
+		        	'title' => '<h3 class="fsub">Lebenswelt\' Shortcodes</h3><h1 class="ftitle">Dynamic<br/>Features</h1>',
 		        	'text' => '<p>In the latest version of our framework we\'ve added a shortcode library to make your features and posts dynamic. The Google maps shortcode is used here!</p>',
 		        	'media' => '[googlemap address="San Diego, CA 92109" width="'.FMEDIAWIDTH.'" height="'.FMEDIAHEIGHT.'"]',
 		        	'link' => '#url_goes_here',
@@ -236,7 +236,7 @@ function get_default_fboxes(){
 				'page' => ''
 	    ),
 		'2' => array(
-	        	'title' => '<h3>PageLines Themes</h3>',
+	        	'title' => '<h3>Lebenswelt Themes</h3>',
 	        	'text' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et nulla diam, ac interdum nisl. Nunc mattis tincidunt dictum. Etiam luctus consequat ipsum.</p><p><img alt="fbox1" class="aligncenter" src="'.THEME_IMAGES.'/fbox2.png" /></p>',
 				'name' => 'Feature Box 2',
 				'page' => ''

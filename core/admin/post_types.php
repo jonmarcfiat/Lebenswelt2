@@ -16,7 +16,7 @@
 				'hierarchical' => false,  
 				'rewrite' => false,  
 				'supports' => array('title', 'editor', 'thumbnail'), 
-				'menu_icon' => CORE_IMAGES."/favicon-pagelines.ico"
+				'menu_icon' => CORE_IMAGES."/favicon-lebenswelt.ico"
 			));  
 		
 	}
@@ -31,7 +31,7 @@
 				'hierarchical' => false,  
 				'rewrite' => false,  
 				'supports' => array('title', 'editor', 'thumbnail'), 
-				'menu_icon' => CORE_IMAGES."/favicon-pagelines.ico"
+				'menu_icon' => CORE_IMAGES."/favicon-lebenswelt.ico"
 			));  
 	}
 
@@ -86,8 +86,8 @@
 
 		function admin_init(){
 			add_meta_box("media-meta", "Media HTML", "meta_options", "feature", "normal", "low");
-			pagelines_default_custom_posts('feature');
-			pagelines_default_custom_posts('boxes');
+			lebenswelt_default_custom_posts('feature');
+			lebenswelt_default_custom_posts('boxes');
 		}
 
 		function meta_options(){
@@ -111,7 +111,7 @@
 			update_post_meta($post->ID, "postMedia", $_POST["postMedia"]);
 		}
 		
-		function pagelines_default_custom_posts($type = ''){
+		function lebenswelt_default_custom_posts($type = ''){
 			
 			if(!get_posts('post_type='.$type)){
 				if($type == "feature") $default_posts = array_reverse(get_default_features());
@@ -130,13 +130,13 @@
 					if($type == 'feature'){ 
 						update_post_meta($newPostID, 'postMedia', $dpost['media']);
 					}elseif($type == 'boxes'){ 
-						pagelines_add_post_thumbnail($newPostID, $dpost['media']);
+						lebenswelt_add_post_thumbnail($newPostID, $dpost['media']);
 					}
 				}
 			}
 		}
 		
-		function pagelines_add_post_thumbnail($postid, $imagename, $imagedir = null){
+		function lebenswelt_add_post_thumbnail($postid, $imagename, $imagedir = null){
 			
 			if($imagename){
 				

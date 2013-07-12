@@ -5,7 +5,7 @@
 
 
 // Basic Search Form
-function pagelines_searchform(){?>	
+function lebenswelt_searchform(){?>	
 		
 	<form method="get" id="searchform" class="" action="<?php bloginfo('url'); ?>/">
 		<fieldset>
@@ -18,7 +18,7 @@ function pagelines_searchform(){?>
 <?php }
 
 // Page Titles
-function pagelines_page_title($searchresults = true){
+function lebenswelt_page_title($searchresults = true){
  	global $bbpress_forum;
 	if($bbpress_forum){
 		echo '<a href="<?php bb_uri(); ?>">. bb_option("name"); .</a>';
@@ -29,7 +29,7 @@ function pagelines_page_title($searchresults = true){
 		if(get_option('page_for_posts')){
 			echo get_the_title(get_option('page_for_posts'));
 		}else{
-			e_pagelines("blog_title_text",__('The Latest', TDOMAIN));
+			e_lebenswelt("blog_title_text",__('The Latest', TDOMAIN));
 		}
 	}elseif(is_search() && $showsearch){
 		if(is_search()){
@@ -46,7 +46,7 @@ function pagelines_page_title($searchresults = true){
 }
  
 // Post pagination
-function pagelines_pagination(){?>		
+function lebenswelt_pagination(){?>		
 	<?php if(function_exists('wp_pagenavi') && VPRO):?> 
 		<?php wp_pagenavi(); ?>  
 	<?php elseif (show_posts_nav()) : ?>
@@ -58,26 +58,26 @@ function pagelines_pagination(){?>
 
 <?php } 
 
-function pagelines_postnav(){?>
+function lebenswelt_postnav(){?>
 	<div class="post-nav fix"> 
 		<span class="previous"><?php previous_post_link('%link') ?></span> 
 		<span class="next"><?php next_post_link('%link') ?></span>
 	</div>
 <?php } 
 
-function pagelines_twitter(){?>
+function lebenswelt_twitter(){?>
 
-	<?php if(function_exists('twitter_messages') && pagelines('twittername')):?>
+	<?php if(function_exists('twitter_messages') && lebenswelt('twittername')):?>
 	<span class="twitter">
-		 "<?php twitter_messages(pagelines('twittername'), 1, false, false, '', false, false, false); ?>" &mdash;&nbsp;<a class="twitteraccount" href="http://www.twitter.com/<?php echo pagelines('twittername');?>"><?php echo pagelines('twittername');?></a>
+		 "<?php twitter_messages(lebenswelt('twittername'), 1, false, false, '', false, false, false); ?>" &mdash;&nbsp;<a class="twitteraccount" href="http://www.twitter.com/<?php echo lebenswelt('twittername');?>"><?php echo lebenswelt('twittername');?></a>
 	</span>
 	<?php endif;?>
 	
 <?php }
 
-function pagelines_nav($name = '', $class = '', $depth = 1, $dropdown = false, $home = true){ ?>	
+function lebenswelt_nav($name = '', $class = '', $depth = 1, $dropdown = false, $home = true){ ?>	
 
-	<?php if(function_exists('wp_nav_menu') && pagelines('use_wp_nav_menu')):?>
+	<?php if(function_exists('wp_nav_menu') && lebenswelt('use_wp_nav_menu')):?>
 		<?php wp_nav_menu( array( 'slug'=> $name, 'menu_class'  => $class, 'sort_column' => 'menu_order', 'container' => null, 'container_class' => '', 'depth' => $depth ) ); ?>
 	<?php else:?>
 
@@ -85,7 +85,7 @@ function pagelines_nav($name = '', $class = '', $depth = 1, $dropdown = false, $
 			<?php if($home):?><li class="page_item "><a class="home" href="<?php echo get_option('home'); ?>/" title="<?php _e('Home',TDOMAIN);?>"><?php _e('Home',TDOMAIN);?></a></li><?php endif;?>
 			<?php 
 				$frontpage_id = get_option('page_on_front');
-				if($bbpress_forum && pagelinesforum('exclude_pages')){ $forum_exclude = ','.pagelinesforum('exclude_pages');}
+				if($bbpress_forum && lebensweltforum('exclude_pages')){ $forum_exclude = ','.lebensweltforum('exclude_pages');}
 				else{ $forum_exclude = '';}
 				wp_list_pages('exclude='.$frontpage_id.$forum_exclude.'&depth='.$depth.'&title_li=');?>
 
@@ -96,17 +96,17 @@ function pagelines_nav($name = '', $class = '', $depth = 1, $dropdown = false, $
 <?php } 
 
 
-function pagelines_credit(){?>
-	<?php if(pagelines('no_credit') || !VDEV):?>
-		<div id="cred" class="pagelines">
-			<a class="plimage" target="_blank" href="<?php e_pagelines('partner_link', pagelines('credlink'));?>" title="<?php echo THEMENAME;?> by PageLines">
-				<img src="<?php echo THEME_IMAGES.'/pagelines.png';?>" alt="<?php echo THEMENAME;?> by PageLines" />
+function lebenswelt_credit(){?>
+	<?php if(lebenswelt('no_credit') || !VDEV):?>
+		<div id="cred" class="lebenswelt">
+			<a class="plimage" target="_blank" href="<?php e_lebenswelt('partner_link', lebenswelt('credlink'));?>" title="<?php echo THEMENAME;?> by Lebenswelt">
+				<img src="<?php echo THEME_IMAGES.'/lebenswelt.png';?>" alt="<?php echo THEMENAME;?> by Lebenswelt" />
 			</a>
 		</div>
 	<?php endif;?>
 <?php } 
 
-function pagelines_author_info(){?>
+function lebenswelt_author_info(){?>
 	
 	<div class="author-info">
 		<div class="pic alignleft"><?php echo get_avatar(get_the_author_email(), $size = '80', $default = $urlHome . '/images/default_avatar_author.gif' ); ?></div>
@@ -122,35 +122,35 @@ function pagelines_author_info(){?>
 	</div>
 <?php } 
 
-function pagelines_post_footer(){?>
+function lebenswelt_post_footer(){?>
 	<div class="post-footer">
 
 			<div class="left">
-				<?php e_pagelines('post_footer_social_text', '');?>	
+				<?php e_lebenswelt('post_footer_social_text', '');?>	
 			</div>
 			<div class="right">
 				<?php 
 					$upermalink = urlencode(get_permalink());
 					$utitle = urlencode(get_the_title());
 				?>
-					<?php if(pagelines('share_facebook')):?>
+					<?php if(lebenswelt('share_facebook')):?>
 						<a href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>&t=<?php the_title();?>" title="<?php _e('Share on',TDOMAIN);?> Facebook" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-facebook.png" alt="Facebook" /></a>
 					<?php endif;?> 
 
-					<?php if(pagelines('share_twitter')):?>
+					<?php if(lebenswelt('share_twitter')):?>
 						<a href="http://twitter.com/home/?status=<?php the_title();?>%20<?php echo get_permalink(); ?>" title="<?php _e('Share on',TDOMAIN);?> Twitter" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-twitter.png" alt="Twitter" /></a>
 					<?php endif;?> 
 
-					<?php if(pagelines('share_delicious')):?>
+					<?php if(lebenswelt('share_delicious')):?>
 						<a href="http://del.icio.us/post?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="<?php _e('Share on',TDOMAIN);?> Delicious" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-del.png" alt="Delicious" /></a>
 					<?php endif;?>
-					<?php if(pagelines('share_mixx')):?>
+					<?php if(lebenswelt('share_mixx')):?>
 						<a href="http://www.mixx.com/submit?page_url=<?php the_permalink() ?>" title="<?php _e('Share on',TDOMAIN);?> Mixx" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-mixx.png" alt="Mixx" /></a>
 					<?php endif;?>
-					<?php if(pagelines('share_stumbleupon')):?>
+					<?php if(lebenswelt('share_stumbleupon')):?>
 						<a href="http://www.stumbleupon.com/submit?url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="<?php _e('Share on',TDOMAIN);?> StumbleUpon" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-stumble.png" alt="StumbleUpon" /></a>
 					<?php endif;?>
-					<?php if(pagelines('share_digg')):?>
+					<?php if(lebenswelt('share_digg')):?>
 						<a href="http://digg.com/submit?phase=2&url=<?php the_permalink() ?>&title=<?php the_title(); ?>" title="<?php _e('Share on',TDOMAIN);?> Digg" rel="nofollow" target="_blank"><img src="<?php echo THEME_IMAGES; ?>/icons/ico-digg.png" alt="Digg" /></a>
 					<?php endif;?>
 			</div>

@@ -7,8 +7,8 @@
  **/
 
 
-/* //	Run the pagelines_pre Hook
-	do_action('pagelines_code_pre'); */
+/* //	Run the lebenswelt_pre Hook
+	do_action('lebenswelt_code_pre'); */
 
 // GET GLOBAL VARIABLES
 	include(CORE.'/globals.php');
@@ -18,7 +18,7 @@
 
 
 /* //LOCALIZE
-	pagelines_localize(); */
+	lebenswelt_localize(); */
 
 // CORE FUNCTION LIBRARIES
 	include (CORE.'/functions/functions_library.php');
@@ -62,7 +62,7 @@
 		include (CORE_ADMIN.'/options.class.php');
 	
 	// INITIATE OPTIONS OBJECT - must come after theme functions file (or functions won't exist)
-	 	$GLOBALS['pagelines'] = new Options; 
+	 	$GLOBALS['lebenswelt'] = new Options; 
 	
 	// WP CONFIG OPTIONS
 		include (CORE_FUNCTIONS.'/wp_config_options.php');
@@ -79,19 +79,19 @@
 	include (CORE_ADMIN.'/option_templates.php'); 
 	include (CORE_ADMIN.'/pagepost_setup.php');
 
-	add_action('pagelines_before_html', 'pagelines_id_setup');
-	function pagelines_id_setup(){
+	add_action('lebenswelt_before_html', 'lebenswelt_id_setup');
+	function lebenswelt_id_setup(){
 		global $post;
-		global $pagelines_ID;
+		global $lebenswelt_ID;
 		
-		if(isset($post) && is_object($post)) $pagelines_ID = $post->ID;
-		else $pagelines_ID = '';
+		if(isset($post) && is_object($post)) $lebenswelt_ID = $post->ID;
+		else $lebenswelt_ID = '';
 		
 		/* // CORE PLUGINS
 			if(!function_exists('twitter_messages')) include (CORE_PLUGINS.'/twitter.php'); */
 	}
 
-/* //	Run the pagelines_init Hook
-	do_action('pagelines_code_init'); */
+/* //	Run the lebenswelt_init Hook
+	do_action('lebenswelt_code_init'); */
 
 	

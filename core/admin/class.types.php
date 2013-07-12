@@ -2,15 +2,15 @@
 /**
  * 
  *
- *  PageLines Custom Post Type Class
+ *  Lebenswelt Custom Post Type Class
  *
  *
- *  @package PageLines Core
+ *  @package Lebenswelt Core
  *  @subpackage Post Types
  *  @since 4.0
  *
  */
-class PageLinesPostType {
+class LebensweltPostType {
 
 	var $id;		// Root id for section.
 	var $settings;	// Settings for this section
@@ -37,7 +37,7 @@ class PageLinesPostType {
 				'hierarchical' => false,  
 				'rewrite' => false,  
 				'supports' => array('title', 'editor', 'thumbnail'), 
-				'menu_icon' => CORE_IMAGES."/favicon-pagelines.ico"
+				'menu_icon' => CORE_IMAGES."/favicon-lebenswelt.ico"
 			);
 		
 		$this->settings = wp_parse_args($settings, $defaults); // settings for post type

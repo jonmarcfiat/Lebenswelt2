@@ -10,7 +10,7 @@
  *  @since 4.0
  *
  */
-class PageLinesLayout {
+class LebensweltLayout {
 
 	// BUILD THE PAGELINES OBJECT
 		function __construct($layout_mode = null) {
@@ -46,13 +46,13 @@ class PageLinesLayout {
 		
 
 		function get_layout_map(){
-			if(get_option('pagelines_layout_map')){
-				$this->layout_map = get_option('pagelines_layout_map');
+			if(get_option('lebenswelt_layout_map')){
+				$this->layout_map = get_option('lebenswelt_layout_map');
 			}else{
 				
 				$this->layout_map = $this->default_layout_setup();
 				
-				update_option('pagelines_layout_map', $this->layout_map);
+				update_option('lebenswelt_layout_map', $this->layout_map);
 				
 			}
 		}
@@ -120,7 +120,7 @@ class PageLinesLayout {
 		function reset_layout_to_default(){
 			$this->layout_map = $this->default_layout_setup();
 		
-			update_option('pagelines_layout_map', $this->layout_map);
+			update_option('lebenswelt_layout_map', $this->layout_map);
 		}
 		
 		function set_layout_data(){
@@ -315,7 +315,7 @@ class PageLinesLayout {
 
 
 function get_layout_mode(){
-	$load_layout = new PageLinesLayout();
+	$load_layout = new LebensweltLayout();
 	$layoutmap = $layout_load->get_layout_map();
 	$layout_mode = $layoutmap['layout_mode'];
 	return $layout_mode;

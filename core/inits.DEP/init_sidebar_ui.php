@@ -19,10 +19,10 @@ function sidebarui_script(){?>
 	var $j = jQuery.noConflict();
 	
 	$j(document).ready(function () {
-		<?php if(pagelines('accordionjs')):?>
+		<?php if(lebenswelt('accordionjs')):?>
 		$j("#accordion").accordion({ 
-			<?php if(pagelines('accordion_active')):?>active: <?php echo pagelines('accordion_active'); ?>,<?php endif;?>
-			<?php if(pagelines('accordion_autoheight')):?>autoHeight: true<?php else:?>autoHeight: false<?php endif;?>
+			<?php if(lebenswelt('accordion_active')):?>active: <?php echo lebenswelt('accordion_active'); ?>,<?php endif;?>
+			<?php if(lebenswelt('accordion_autoheight')):?>autoHeight: true<?php else:?>autoHeight: false<?php endif;?>
 		});
 		<?php endif;?>
 		

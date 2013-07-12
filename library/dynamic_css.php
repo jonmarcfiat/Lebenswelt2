@@ -1,8 +1,8 @@
 
 <style type="text/css">
 
-	<?php if (pagelines('customcss')):?>
-		<?php echo pagelines('customcss');?>
+	<?php if (lebenswelt('customcss')):?>
+		<?php echo lebenswelt('customcss');?>
 	<?php endif;?>
 
 </style>
