@@ -3,7 +3,7 @@
 	//Runs at the beginning of every admin page before the page is rendered
 		add_action( 'admin_init', 'load_scripts' );
 		function load_scripts(){
-			if(isset($_GET['page']) && ($_GET['page'] == 'pagelines' || $_GET['page'] == 'pagelines_feature')){
+			if(isset($_GET['page']) && ($_GET['page'] == 'lebenswelt' || $_GET['page'] == 'lebenswelt_feature')){
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-ui-tabs' );	
@@ -19,13 +19,13 @@
 	function load_head(){
 		
 			echo '<link rel="stylesheet" href="'.CORE_CSS.'/admin.css" type="text/css" media="screen" />';
-			echo '<link rel="shortcut icon" href="'.CORE_IMAGES.'/favicon-pagelines.ico" type="image/x-icon" />';
+			echo '<link rel="shortcut icon" href="'.CORE_IMAGES.'/favicon-lebenswelt.ico" type="image/x-icon" />';
 		
-		if(isset($_GET['page']) && ($_GET['page'] == 'pagelines' || $_GET['page'] == 'pagelines_feature')){
-			if(pagelines_core_support(4)){
+		if(isset($_GET['page']) && ($_GET['page'] == 'lebenswelt' || $_GET['page'] == 'lebenswelt_feature')){
+			if(lebenswelt_core_support(4)){
 				echo '<script type="text/javascript" src="'.CORE_JS.'/ajaxupload.js"></script>';
 				echo '<script type="text/javascript" src="'.CORE_JS.'/jquery.layout.js"></script>';
-				include(CORE_ADMIN.'/pagelines_js_admin.php');
+				include(CORE_ADMIN.'/lebenswelt_js_admin.php');
 			}
 		}
 
@@ -35,14 +35,14 @@
 	add_action( 'admin_menu', 'load_panels' );
 	function load_panels(){	
 		//add_menu_page('Page title', 'Top-level menu title', 'administrator', 'my-top-level-handle', 'my_magic_function');
-		add_object_page ('Page Title', THEMENAME, 'manage_options','pagelines', 'pagelines_theme_options', CORE_IMAGES. '/favicon-pagelines.png');
+		add_object_page ('Page Title', THEMENAME, 'manage_options','lebenswelt', 'lebenswelt_theme_options', CORE_IMAGES. '/favicon-lebenswelt.png');
 	}
 	
 	// Theme Options
 	add_action('admin_menu', 'add_option_interface');
 	function add_option_interface() {
 		//add_submenu_page(parent, page_title, menu_title, capability required, file/handle, [function]); 
-		$pagelines_options_page = add_submenu_page('pagelines', 'Theme Options', 'Theme Options', 'manage_options', 'pagelines','pagelines_theme_options'); // Default
+		$lebenswelt_options_page = add_submenu_page('lebenswelt', 'Theme Options', 'Theme Options', 'manage_options', 'lebenswelt','lebenswelt_theme_options'); // Default
 	}
 	
 	/*
@@ -50,12 +50,12 @@
 	*/
 	
 	/*
-	if(VPRO && !pagelines_core_support(4)){
+	if(VPRO && !lebenswelt_core_support(4)){
 		// Feature Page
 		add_action('admin_menu', 'add_feature_interface');
 		function add_feature_interface() {
 			//add_submenu_page(parent, page_title, menu_title, capability required, file/handle, [function]); 
-			$pagelines_features_page = add_submenu_page('pagelines', 'Feature Page Setup', 'Feature Setup', 'manage_options', 'pagelines_feature','pagelines_feature_options');
+			$lebenswelt_features_page = add_submenu_page('lebenswelt', 'Feature Page Setup', 'Feature Setup', 'manage_options', 'lebenswelt_feature','lebenswelt_feature_options');
 		}
 	}
 	*/
@@ -64,7 +64,7 @@
 	if (is_admin() && isset($_GET['activated'] ) && $pagenow == "themes.php" ) {
 
 		//Do redirect
-		header( 'Location: '.admin_url().'admin.php?page=pagelines&pageaction=activated' ) ;
+		header( 'Location: '.admin_url().'admin.php?page=lebenswelt&pageaction=activated' ) ;
 
 	}
 

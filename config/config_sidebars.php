@@ -75,7 +75,7 @@
 	    'after_title' => '</h3>'
 	));
 
-function pagelines_register_menus(){
+function lebenswelt_register_menus(){
 	
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', TDOMAIN ),
@@ -83,7 +83,7 @@ function pagelines_register_menus(){
 		'footer_social' => __( 'Footer Social Links', TDOMAIN ),
 	) );
 }
-add_action( 'init', 'pagelines_register_menus' );
+add_action( 'init', 'lebenswelt_register_menus' );
 
 
 ?>

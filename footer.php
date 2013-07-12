@@ -1,9 +1,9 @@
-<?php global $pagelines_ID; ?>
+<?php global $lebenswelt_ID; ?>
 		
 
 
 <!--full width bottom widget -->
-<?php if(m_pagelines('full_width_widget', $pagelines_ID) && VPRO):?>
+<?php if(m_lebenswelt('full_width_widget', $lebenswelt_ID) && VPRO):?>
 <div class="contentshadow">
 	<div class="content">
 		<div id="fullwidth_bottom_widgets" class="">
@@ -26,7 +26,7 @@
 		<?php 
 		
 			global $bbpress_forum;
-			if(($bbpress_forum && pagelinesforum('hide_bottom_sidebars')) || !pagelines('bottom_sidebars') || !VPRO) $hide_footer = true;
+			if(($bbpress_forum && lebensweltforum('hide_bottom_sidebars')) || !lebenswelt('bottom_sidebars') || !VPRO) $hide_footer = true;
 			else $hide_footer = false;		
 		?>
 		<?php if(!$hide_footer):?>
@@ -53,16 +53,16 @@
 
 	<div class="effect span12">
 		<div class="content span12">
-			<?php if(pagelines('twitfooter') && pagelines('twittername')):?>
+			<?php if(lebenswelt('twitfooter') && lebenswelt('twittername')):?>
 				<div id="footer_topline"><?php get_template_part ('library/_twittermessages'); ?></div>
 			<?php endif;?>
 			<div id="fcolumns_container" class="fix" style="float:left;">
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Columns') ) : ?>
 					<div class="fcol">
 						<div class="fcol_pad">
-							<?php if(pagelines('footer_logo') && VPRO):?>
+							<?php if(lebenswelt('footer_logo') && VPRO):?>
 								<a class="home" href="<?php echo get_option('home'); ?>/" title="<?php _e('Home',TDOMAIN);?>">
-									<img src="<?php echo pagelines('footer_logo');?>" alt="<?php bloginfo('name');?>" />
+									<img src="<?php echo lebenswelt('footer_logo');?>" alt="<?php bloginfo('name');?>" />
 								</a>
 							<?php else:?>
 								<h3 class="footer-site-title"><a class="home" href="<?php echo get_option('home'); ?>/" title="<?php _e('Home',TDOMAIN);?>"><?php bloginfo('name');?></a></h3>
@@ -85,13 +85,13 @@
 					<div class="fcol">
 						<div class="fcol_pad">
 							<h3><?php _e('More',TDOMAIN);?></h3>
-							<?php if(pagelines('welcomemessage')):?><div class="welcomemessage"><?php echo pagelines('welcomemessage');?></div><?php endif;?>
+							<?php if(lebenswelt('welcomemessage')):?><div class="welcomemessage"><?php echo lebenswelt('welcomemessage');?></div><?php endif;?>
 						</div>
 					</div>
 					<div class="fcol">
 						<div class="fcol_pad">
 							<span class="terms">
-								<?php e_pagelines('terms');?>
+								<?php e_lebenswelt('terms');?>
 							</span>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<?php if (pagelines('footerscripts')) echo pagelines('footerscripts');?>
+	<?php if (lebenswelt('footerscripts')) echo lebenswelt('footerscripts');?>
 	<script src="/wp-content/themes/Lebenswelt2/js/main.js"></script>
 	<script src="/wp-content/themes/Lebenswelt2/js/modernizr.custom.28468.js"></script>
 

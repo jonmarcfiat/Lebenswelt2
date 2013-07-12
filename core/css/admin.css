@@ -26,7 +26,7 @@ color:#2E79E1;
 	}
 	colors...0100610 (line 1)
 	
-	.pagelines_panel{
+	.lebenswelt_panel{
 		position: relative;
 		z-index: 0;
 	}
@@ -423,7 +423,7 @@ color:#2E79E1;
 		background: transparent url(../images/admin/question-balloon.png) no-repeat 0 0px;
 	}
 	#optionssubheader .subheader_links a.sh_pro{
-		background: transparent url(../images/favicon-pagelines.png) no-repeat 0 0px;
+		background: transparent url(../images/favicon-lebenswelt.png) no-repeat 0 0px;
 	}
 	
 	#optionssubheader div.padding{
@@ -467,7 +467,7 @@ color:#2E79E1;
 
 /* PAGE OPTIONS */
 	
-	.pagelines_pagepost_options{
+	.lebenswelt_pagepost_options{
 		margin: 25px 20px;
 		border:1px solid #eee;
 		border-bottom: none;
@@ -597,7 +597,7 @@ color:#2E79E1;
 		border-right: 1px dotted #5484C6;
 	}
 	
-	.pagelines-resizer-east, .pagelines-resizer-west{
+	.lebenswelt-resizer-east, .lebenswelt-resizer-west{
 			border-left: 1px dotted #5484C6;
 			border-right: 1px dotted #5484C6;
 			background: #CBE3FF;
@@ -880,7 +880,7 @@ color:#2E79E1;
 		width: 100%;
 	}
 	
-	.pagelines_image_preview{
+	.lebenswelt_image_preview{
 		background: #fff;
 		padding: 7px;
 		border: 1px solid #ccc;

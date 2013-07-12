@@ -1,5 +1,5 @@
 <!-- IE -->
-<?php if(pagelines('google_ie')):?>
+<?php if(lebenswelt('google_ie')):?>
 <!--[if lt IE 8]>
 	<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
 <![endif]-->

@@ -14,13 +14,13 @@ class Options {
 	function update_or_install(){
 		
 			//if options aren't set
-			if(!get_option('pagelines_options') && !get_option('pagelines_options_redundant')){ 
+			if(!get_option('lebenswelt_options') && !get_option('lebenswelt_options_redundant')){ 
 			
 				//if old options are set
 				if(get_option('pagepress_options')){
 				
 					//set new options to old
-					update_option('pagelines_options',get_option('pagepress_options'));
+					update_option('lebenswelt_options',get_option('pagepress_options'));
 				
 				}else{
 				
@@ -52,10 +52,10 @@ class Options {
 	// GET OPTION FUNCTIONS 
 		function get_options() {
 		
-			if(!get_option('pagelines_options')){ 
-				$saved_options = maybe_unserialize(get_option('pagelines_options_redundant'));
-				update_option('pagelines_options',get_option('pagelines_options_redundant'));
-			}else{ $saved_options = maybe_unserialize(get_option('pagelines_options'));	}
+			if(!get_option('lebenswelt_options')){ 
+				$saved_options = maybe_unserialize(get_option('lebenswelt_options_redundant'));
+				update_option('lebenswelt_options',get_option('lebenswelt_options_redundant'));
+			}else{ $saved_options = maybe_unserialize(get_option('lebenswelt_options'));	}
 		
 			if (!empty($saved_options) && is_object($saved_options)) {
 				foreach ($saved_options as $option_name => $value)
@@ -75,11 +75,11 @@ class Options {
 	// SAVE OPTION FUNCTIONS
 		function save_options() {
 			if(!isset($_GET['activated'])) checkauthority();
-			update_option('pagelines_options', $this);
+			update_option('lebenswelt_options', $this);
 			
 			//Redundancy Backup (Hopefully will solve suspected DB problems w some users)
-			if(get_option('pagelines_options')){
-				update_option('pagelines_options_redundant', $this);
+			if(get_option('lebenswelt_options')){
+				update_option('lebenswelt_options_redundant', $this);
 			}
 		}
 		
@@ -154,9 +154,9 @@ class Options {
 						if(isset($_POST[$optionid])) update_option($optionid, $_POST[$optionid]);
 					}elseif($o['type'] == 'layout'){
 					
-						update_option('pagelines_layout_map', $_POST['layout']);
+						update_option('lebenswelt_layout_map', $_POST['layout']);
 						
-						//	print_r(get_option('pagelines_layout_map'));
+						//	print_r(get_option('lebenswelt_layout_map'));
 					}
 					else{
 						$this->update_option($optionid);
@@ -213,44 +213,44 @@ class Options {
 //********* END OF OPTIONS CLASS *********//
 
 
-// PageLines function returns attributes from option class
+// Lebenswelt function returns attributes from option class
 
-function pagelines($option, $post_id = ''){
+function lebenswelt($option, $post_id = ''){
 
 	if($post_id && get_post_meta($post_id, $option, true) && !is_home()){
 		//if option is set for a page/post
 		return get_post_meta($post_id, $option, true);
 	}else{
 		//if not set on page/post return global option.
-		global $pagelines; 
-		if (is_object($pagelines) && isset($pagelines->$option)){
-			return $pagelines->$option;
+		global $lebenswelt; 
+		if (is_object($lebenswelt) && isset($lebenswelt->$option)){
+			return $lebenswelt->$option;
 		} else return false;
 	}
 }
 
-function pagelines_pro($option, $post_id = ''){
+function lebenswelt_pro($option, $post_id = ''){
 
-	if(VPRO) return pagelines($option, $post_id);
+	if(VPRO) return lebenswelt($option, $post_id);
 	else return false;
 }
 
 
-function e_pagelines($option, $alt = '', $post_id = ''){
+function e_lebenswelt($option, $alt = '', $post_id = ''){
 
-	global $pagelines; 
+	global $lebenswelt; 
 	
 	if($post_id && get_post_meta($post_id, $option, true) && !is_home()){
 		//if option is set for a page/post
 		echo get_post_meta($post_id, $option, true);
-	}elseif(isset($pagelines->$option)&&!empty($pagelines->$option)){
-		echo $pagelines->$option;
+	}elseif(isset($lebenswelt->$option)&&!empty($lebenswelt->$option)){
+		echo $lebenswelt->$option;
 	}else{
 		echo $alt;
 	}	
 }
 
-function m_pagelines($option, $post){
+function m_lebenswelt($option, $post){
 	$meta = get_post_meta($post, $option, true);
 	if(isset($meta) && !is_home()){
 		return $meta;
@@ -260,8 +260,8 @@ function m_pagelines($option, $post){
 }
 
 
-function em_pagelines($option, $post, $alt = ''){
-	$post_meta = m_pagelines($option, $post);
+function em_lebenswelt($option, $post, $alt = ''){
+	$post_meta = m_lebenswelt($option, $post);
 	
 	if(isset($post_meta)){
 		echo $post_meta;

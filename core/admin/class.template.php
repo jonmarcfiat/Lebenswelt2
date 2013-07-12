@@ -2,15 +2,15 @@
 /**
  * 
  *
- *  PageLines Template Class
+ *  Lebenswelt Template Class
  *
  *
- *  @package PageLines Core
+ *  @package Lebenswelt Core
  *  @subpackage Sections
  *  @since 4.0
  *
  */
-class PageLinesTemplate {
+class LebensweltTemplate {
 
 	var $id;		// Root id for section.
 	var $name;		// Name for this section.
@@ -133,8 +133,8 @@ class PageLinesTemplate {
 	function get_template_map(){
 		
 		// Get Section / Layout Map
-		if(get_option('pagelines_template_map')){
-			$map = get_option('pagelines_template_map');
+		if(get_option('lebenswelt_template_map')){
+			$map = get_option('lebenswelt_template_map');
 			return $this->update_template_config($map);
 			
 		}else{
@@ -144,7 +144,7 @@ class PageLinesTemplate {
 	}
 	
 	function reset_templates_to_default(){
-		update_option('pagelines_template_map', default_template_map());
+		update_option('lebenswelt_template_map', default_template_map());
 	}
 
 	function print_template_section_headers(){
@@ -214,14 +214,14 @@ class PageLinesTemplate {
 
 
 /**
- * PageLines Template Object 
- * @global object $pagelines_template
+ * Lebenswelt Template Object 
+ * @global object $lebenswelt_template
  * @since 4.0.0
  */
-function build_pagelines_template(){	
-	global $pagelines_template;
+function build_lebenswelt_template(){	
+	global $lebenswelt_template;
 
-	$pagelines_template = new PageLinesTemplate;	
+	$lebenswelt_template = new LebensweltTemplate;	
 }
 
 /**
@@ -230,7 +230,7 @@ function build_pagelines_template(){
  * @since 4.0.0
  */
 function save_template_map($templatemap){	
-	update_option('pagelines_template_map', $templatemap);
+	update_option('lebenswelt_template_map', $templatemap);
 }
 
 /**
@@ -238,7 +238,7 @@ function save_template_map($templatemap){
  *
  * @since 4.0.0
  */
-add_action('wp_ajax_pagelines_save_sortable', 'ajax_save_template_map');
+add_action('wp_ajax_lebenswelt_save_sortable', 'ajax_save_template_map');
 
 function ajax_save_template_map() {
 	global $wpdb; // this is how you get access to the database

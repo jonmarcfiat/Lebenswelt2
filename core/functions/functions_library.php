@@ -12,7 +12,7 @@ function show_posts_nav() {
  * Identifies which version of the core to support
  * @since 1.1
  */
-function pagelines_core_support($coreversion){
+function lebenswelt_core_support($coreversion){
 	
 	if(defined('CORESUPPORT')){
 		
@@ -28,7 +28,7 @@ function pagelines_core_support($coreversion){
  * Pulls a global identifier from a bbPress forum installation
  * @since 3.x.x
  */
-function pagelines_bbpress_forum(){
+function lebenswelt_bbpress_forum(){
 	global $bbpress_forum;
 	if($bbpress_forum ){
 		return true;
@@ -78,18 +78,18 @@ function show_query_analysis(){
 		 if( function_exists('the_post_thumbnail') && has_post_thumbnail($post)){
 			
 			// show on single post pages only
-			if(is_single() && pagelines('pl_postthumbs') == "single") return true;
+			if(is_single() && lebenswelt('pl_postthumbs') == "single") return true;
 			
 			// show only on posts and search pages
-			if((is_home() || is_search()) && pagelines('pl_postthumbs') == "blog") return true;
+			if((is_home() || is_search()) && lebenswelt('pl_postthumbs') == "blog") return true;
 			
 			// show on all posts pages
-			if(pagelines('pl_postthumbs') == "all" || !pagelines('pl_postthumbs')) return true;
+			if(lebenswelt('pl_postthumbs') == "all" || !lebenswelt('pl_postthumbs')) return true;
 			
-			if(pagelines('pl_postthumbs') == "hide") return false;
+			if(lebenswelt('pl_postthumbs') == "hide") return false;
 			
 			// old method
-			if(is_single() && pagelines('excerptshidesingle')) return false;
+			if(is_single() && lebenswelt('excerptshidesingle')) return false;
 			
 			else return false;
 		} else return false;
@@ -104,20 +104,20 @@ function show_query_analysis(){
 			if(!VPRO) return false;
 			
 			// show on single post pages only
-			if(is_single() && pagelines('pl_postexcerpts') == "single") return true;
+			if(is_single() && lebenswelt('pl_postexcerpts') == "single") return true;
 			
 			// show only on posts and search pages
-			if((is_home() || is_category() || is_archive()) && pagelines('pl_postexcerpts') == "blog") return true;
+			if((is_home() || is_category() || is_archive()) && lebenswelt('pl_postexcerpts') == "blog") return true;
 			
 			// show on all posts pages
-			if(pagelines('pl_postexcerpts') == "all" || is_search()) return true;
+			if(lebenswelt('pl_postexcerpts') == "all" || is_search()) return true;
 			
-			if(pagelines('pl_postexcerpts') == "hide") return false;
+			if(lebenswelt('pl_postexcerpts') == "hide") return false;
 			
-			if(!pagelines('pl_postexcerpts')) return true;
+			if(!lebenswelt('pl_postexcerpts')) return true;
 			// old methods
-				if(!pagelines('pl_postexcerpts') && is_single() && pagelines('excerptshidesingle')) return false;
-				if(!pagelines('pl_postexcerpts') && pagelines('excerptshide')) return false;
+				if(!lebenswelt('pl_postexcerpts') && is_single() && lebenswelt('excerptshidesingle')) return false;
+				if(!lebenswelt('pl_postexcerpts') && lebenswelt('excerptshide')) return false;
 			
 			else return false;
 	}
@@ -132,7 +132,7 @@ function show_query_analysis(){
 			if(is_search() || is_category()) return false;
 			
 			// show on all posts pages
-			if(!pagelines('pl_postcontent') || (pagelines('pl_postcontent') == "all" && !is_search())) return true;
+			if(!lebenswelt('pl_postcontent') || (lebenswelt('pl_postcontent') == "all" && !is_search())) return true;
 			
 			
 			else return false;

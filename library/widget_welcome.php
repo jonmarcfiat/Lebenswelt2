@@ -1,9 +1,9 @@
-<?php if(is_home() || is_single() || pagelines('welcomeall')):?>		
-	<?php if(pagelines('greeting') || pagelines('welcomemessage')):?>
+<?php if(is_home() || is_single() || lebenswelt('welcomeall')):?>		
+	<?php if(lebenswelt('greeting') || lebenswelt('welcomemessage')):?>
 		<div id="welcome" class="fix">
 			<div class="welcometext">
-				<?php if(pagelines('greeting')):?><h3 class="greeting"><?php echo pagelines('greeting');?></h3><?php endif;?>
-				<?php if(pagelines('welcomemessage')):?><div class="welcomemessage"><?php echo pagelines('welcomemessage');?></div><?php endif;?>
+				<?php if(lebenswelt('greeting')):?><h3 class="greeting"><?php echo lebenswelt('greeting');?></h3><?php endif;?>
+				<?php if(lebenswelt('welcomemessage')):?><div class="welcomemessage"><?php echo lebenswelt('welcomemessage');?></div><?php endif;?>
 				<?php get_template_part ('library/_twittermessages'); ?>
 				<div class="clear"></div>
 			</div>

@@ -52,7 +52,7 @@
 			<?php endif;?>
 			<?php  if(pl_show_content($post->ID)):?>  	
 				<div class="copy fix">
-					<?php if(pagelines('pagetitles') && is_page()  || is_page_template('page-feature-blog.php')):?>
+					<?php if(lebenswelt('pagetitles') && is_page()  || is_page_template('page-feature-blog.php')):?>
 						<h1 class="pagetitle"><?php the_title(); ?></h1>
 					<?php endif;?>
 					<div class="textcontent">
@@ -66,7 +66,7 @@
 					<?php the_tags(__('Tagged with: ', TDOMAIN),' &bull; ','<br />'); ?>&nbsp;
 					</div>
 				</div>
-				<?php if(pagelines('authorinfo') && is_single()):?>
+				<?php if(lebenswelt('authorinfo') && is_single()):?>
 					<?php get_template_part('library/_authorinfo');?>
 				<?php endif;?>
 								

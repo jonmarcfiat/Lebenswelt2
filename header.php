@@ -1,4 +1,4 @@
-<?php do_action('pagelines_before_html');?>
+<?php do_action('lebenswelt_before_html');?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> class="no-js">
@@ -7,8 +7,8 @@
 
 	<!-- Meta Images -->
 	
-		<?php if(pagelines('favicon')):?><link rel="shortcut icon" href="<?php echo pagelines('favicon');?>" type="image/x-icon" /><?php endif;?>
-		<?php if(pagelines('touchicon')):?><link rel="apple-touch-icon" href="<?php echo pagelines('touchicon');?>" /><?php endif;?>
+		<?php if(lebenswelt('favicon')):?><link rel="shortcut icon" href="<?php echo lebenswelt('favicon');?>" type="image/x-icon" /><?php endif;?>
+		<?php if(lebenswelt('touchicon')):?><link rel="apple-touch-icon" href="<?php echo lebenswelt('touchicon');?>" /><?php endif;?>
 
 	<!-- Title -->
 	
@@ -41,7 +41,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
   	
-		<?php if (pagelines('headerscripts')) echo pagelines('headerscripts');?>
+		<?php if (lebenswelt('headerscripts')) echo lebenswelt('headerscripts');?>
 
 		<?php wp_head(); ?>
 

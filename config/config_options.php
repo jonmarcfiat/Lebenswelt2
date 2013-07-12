@@ -471,9 +471,9 @@ function get_option_array(){
 						'default' => '',
 						'type' => 'text',
 						'inputlabel' => 'Enter Partner Link',
-						'title' => 'PageLines Partner Link',
-						'shortexp' => 'Change your PageLines footer link to a partner link',
-						'exp' => 'If you are a <a href="http://www.pagelines.com/partners">PageLines Partner</a> enter your custom link here and the footer link will become a partner or affiliate link. (Do not include HTML)'
+						'title' => 'Lebenswelt Partner Link',
+						'shortexp' => 'Change your Lebenswelt footer link to a partner link',
+						'exp' => 'If you are a <a href="http://www.lebenswelt.com/partners">Lebenswelt Partner</a> enter your custom link here and the footer link will become a partner or affiliate link. (Do not include HTML)'
 					), */
 				'customcss' => array(
 						'version' => 'pro',

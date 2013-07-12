@@ -50,7 +50,7 @@
 	define('DEMO', false);	
 
 /* // LOCALIZE
-	function pagelines_localize(){
+	function lebenswelt_localize(){
 		// LOCALIZATION - Needs to come after config_theme and before localized config files
 			define('TDOMAIN', THEMENAME); 
 			define('LANGUAGE_FOLDER', TEMPLATEPATH.'/language');
