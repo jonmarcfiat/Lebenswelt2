@@ -3329,9 +3329,9 @@ a.badge:hover {
 /*** Carousels (Bootstrap) ***/
 
 .carousel {
-  background-image: url('/wp-content/uploads/bgs/texture-bg2.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-image: url('/wp-content/uploads/bgs/footer-matte.png');
+  background-size: 5%;
+  background-repeat: repeat;
   position: relative;
   margin-bottom: 18px;
   line-height: 1;
