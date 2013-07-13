@@ -67,7 +67,7 @@ Description: Styling Navbars
 		border-top: 10px solid transparent;
 	}
 	
-	.hugenav li:hover {
+	.hugenav li:hover, .hugenav .current {
 		border-top: 10px solid #3F88AD;
 	}
 

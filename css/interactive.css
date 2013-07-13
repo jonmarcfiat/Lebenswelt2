@@ -787,6 +787,10 @@ legend + .control-group {
 
 	/*** Gravity Forms ***/
 	
+	.gform_body {
+		font-family: 'Oxygen', helvetica, sans-serif;
+	}
+	
 	.field-background {
 		background: #f4f7f7;
 	}
@@ -805,7 +809,7 @@ legend + .control-group {
 		padding: 15px 0;
 		}
 		
-	.gfield p {
+	.gfield p {	
 		padding: 0 15px;	
 		}
 
@@ -3329,10 +3333,18 @@ a.badge:hover {
 /*** Carousels (Bootstrap) ***/
 
 .carousel {
-  background-image: url('/wp-content/uploads/bgs/footer-matte.png');
+  background-color: #222;
+  background-image: -moz-linear-gradient(top, #333, #222);
+  background-image: -ms-linear-gradient(top, #333, #222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333), to(#222));
+  background-image: -webkit-linear-gradient(top, #222, #141414);
+  background-image: -o-linear-gradient(top, #333, #222);
+  background-image: linear-gradient(top, #333, #222);
+  /* background-image: url('/wp-content/uploads/bgs/footer-matte.png');
   background-size: 5%;
-  background-repeat: repeat;
+  background-repeat: repeat; */
   position: relative;
+  opacity: .85;
   margin-bottom: 18px;
   line-height: 1;
 }

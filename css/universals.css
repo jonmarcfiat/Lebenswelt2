@@ -185,13 +185,13 @@ Description: Styling for universal elements: typography, links, alignment, etc
 		}
 		
 	.support {
-		color: #777;
+		color: #3F88AD;
 		font-size: 25px;
-		line-height: 26px;
+		line-height: 30px;
 	}
 	
 	.subtle {
-		font-size: 18px;
+		font-size: 16px;
 		color: #aaa;
 		}
 		
