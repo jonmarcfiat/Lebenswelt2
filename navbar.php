@@ -36,7 +36,7 @@
 				<li class="divider-vertical"></li>
 				<li><a href="/?page_id=77"><i class="icon-bookmark icon-white" style="margin: 2px 8px;"></i> Portfolio</a></li>
 				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=840"><i class="icon-list icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
+				<li><a href="/?page_id=840"><i class="icon-tasks icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
 				<li class="divider-vertical"></li>
 				<li><a href="/?page_id=540" style="background: #555; color: #fff;"><i class="icon-share icon-white" style="margin: 2px 10px;"></i> Get a Free Quote</a></li>
 				<li class="divider-vertical"></li>

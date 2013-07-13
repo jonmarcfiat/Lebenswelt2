@@ -12,7 +12,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 /*** Body ***/
 
 	body {
-		background: #fff url('') top left repeat scroll;
+		background: #fff url('/wp-content/uploads/bgs/damask-bg-white.pngx') top center no-repeat fixed;
 		font-size:13px;
 		line-height:1.6em;
 		font-family:georgia, times, serif;
@@ -37,7 +37,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		margin: 0 auto;
-		border-bottom: 3px solid #222;
+		border-bottom: 3px solid #555;
 		box-shadow: 0 0 45px #999;
 		}
 
@@ -82,7 +82,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 /*** TitleBar ***/
 
 	#titlebar {
-		background: #ECBE13;
+		background: #3F88AD;
 		/* background: #ECCD35; */
 		opacity: .8;
 		border-bottom: 0px solid #eee;
@@ -98,6 +98,10 @@ Description: Body, header, footer, sidebars, widgets, etc
 		padding: 0 15px;
 		box-shadow: 0 0 35px #444;
 		}
+		
+	#titlebar h2 {
+		margin: 20px 0;
+	}
 
 
 

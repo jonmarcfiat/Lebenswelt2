@@ -59,28 +59,28 @@ Description: Styling for universal elements: typography, links, alignment, etc
 
 	h3 {
 		font-size: 22px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 		
 	h4 {
 		font-size: 20px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 	
 	h5 {
 		font-size: 18px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 	
 	h6 {
 		font-size: 16px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
@@ -183,9 +183,15 @@ Description: Styling for universal elements: typography, links, alignment, etc
 		line-height: 36px;
 		text-shadow: none;
 		}
+		
+	.support {
+		color: #3F88AD;
+		font-size: 25px;
+		line-height: 30px;
+	}
 	
 	.subtle {
-		font-size: 18px;
+		font-size: 16px;
 		color: #aaa;
 		}
 		

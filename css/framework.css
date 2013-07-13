@@ -224,7 +224,7 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
 	
 	/* Off-Canvas Responsive Navigation */
 	
-	#nav {
+  #nav {
     position: absolute;
     top: 0;
     padding-top: 5.25em;
@@ -416,9 +416,11 @@ Description: Derived from Twitter Bootstrap Responsive v2.0.3
 		float: none;
 		width: 100%;
 		}
+	
+	#header {background-size: 250%;}
 
 	#header .content {padding: 0;}
-	.headline {padding:15px 0;}
+	.headline {padding:0px 0;}
 
 	#da-slider {height: ;}
 
