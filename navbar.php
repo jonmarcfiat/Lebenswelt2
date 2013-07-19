@@ -13,7 +13,7 @@
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-user icon-white" style="margin: 2px 8px;"></i> Team
+					<i class="icon-flag icon-white" style="margin: 2px 8px;"></i> About
 					</a>
 						<ul class="dropdown-menu">
 							<li><a href="/team/philosophy">Philosophy</a></li>
@@ -28,17 +28,17 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li><a href="/websites">Websites</a></li>
+							<li><a href="/management">Management</a></li>
 							<li><a href="/branding">Branding</a></li>	
-							<li><a href="/hosting">Hosting</a></li>
 							<li><a href="/portfolio/ethika-politika">Strategy</a></li>								
 						</ul>
 				</li>
 				<li class="divider-vertical"></li>
 				<li><a href="/?page_id=77"><i class="icon-bookmark icon-white" style="margin: 2px 8px;"></i> Portfolio</a></li>
 				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=840"><i class="icon-tasks icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=540" style="background: #555; color: #fff;"><i class="icon-share icon-white" style="margin: 2px 10px;"></i> Get a Free Quote</a></li>
+				<!--<li><a href="/?page_id=840"><i class="icon-tasks icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
+				<li class="divider-vertical"></li>-->
+				<li><a href="/?page_id=540" style="background: #555; color: #fff;"><i class="icon-gift icon-white" style="margin: 2px 10px;"></i> Get a Free Quote</a></li>
 				<li class="divider-vertical"></li>
 			</ul>
 			<img src="http://fiatinsight.com/wp-content/uploads/logos/fiat-circle-logo.png" style="float:right; margin-top: 5px; opacity: .7;" height="28px">

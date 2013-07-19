@@ -13,11 +13,29 @@
 	</div>
 	<? endif;?>
 	
+	<!-- Management page -->
+	<?php if ( is_page('management') ) :?>
+	<div id="titlebar">
+		<div class="container grad2">
+			<center><h2 class="lead whiteout">Service with a smile. Probably lots.</h2>
+		</div>
+	</div>
+	<? endif;?>
+	
 	<!-- Strategy page -->
 	<?php if ( is_page('ethika-politika') ) :?>
 	<div id="titlebar">
 		<div class="container grad2">
 			<center><h2 class="lead whiteout">Doing what's best is worth the effort.</h2>
+		</div>
+	</div>
+	<? endif;?>
+	
+	<!-- Portfolio page -->
+	<?php if ( is_page('portfolio') ) :?>
+	<div id="titlebar">
+		<div class="container grad2">
+			<center><h2 class="lead whiteout">The quality of our clients speaks volumes.</h2>
 		</div>
 	</div>
 	<? endif;?>

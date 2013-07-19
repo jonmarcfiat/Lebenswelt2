@@ -19,7 +19,7 @@
 		<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<?php if ( is_single() || is_page()) wp_enqueue_script( 'comment-reply' ); ?> <!-- This makes the comment box appear where the ‘reply to this comment’ link is -->
-		<?php  wp_enqueue_script("jquery"); ?>
+		<?php /* wp_enqueue_script("jquery"); */ ?>
 
 	<!-- Stylesheets -->
 
@@ -38,7 +38,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Mate:400,400italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Signika:400' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
   	
 		<?php if (lebenswelt('headerscripts')) echo lebenswelt('headerscripts');?>
@@ -48,6 +47,7 @@
 	<!-- Call the Scripts -->
 
 		<?php get_template_part ('scripts/scripts');?>
+		
 
 </head><!-- End Head -->
 
