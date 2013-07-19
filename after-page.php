@@ -19,5 +19,8 @@
 
 */
 
+	if (is_page('websites'))
+		get_template_part('entities/contactform');
+
 ?>
 

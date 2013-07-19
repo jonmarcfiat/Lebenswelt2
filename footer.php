@@ -125,6 +125,8 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<?php if (lebenswelt('footerscripts')) echo lebenswelt('footerscripts');?>
+
+
 	<script src="/wp-content/themes/Lebenswelt2/js/main.js"></script>
 	<script src="/wp-content/themes/Lebenswelt2/js/modernizr.custom.28468.js"></script>
 

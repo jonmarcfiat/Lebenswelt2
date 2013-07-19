@@ -1,16 +1,22 @@
 <?php ?>	
 
+	<!-- jQuery -->
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
 	<!-- Call Bootstrap Javascript -->
 
-		<script src="/wp-content/themes/Lebenswelt2/js/bootstrap.js"></script>
 		<script src="/wp-content/themes/Lebenswelt2/js/modernizr.js"></script>
-	
+		<script src="/wp-content/themes/Lebenswelt2/js/bootstrap.js"></script>
+
+
 	<!-- Bootstrap Carousel Slider Initilization -->
 
-		<script>
-		$(function(){
- 		 $('#myCarousel').carousel();
-		});
+		<script type="text/javascript">
+			$(function(){
+	 			 $('#myCarousel').carousel();
+			});
 		</script>
 
 	<!-- Javascript modifications for WordPress-powered menus in Bootstrap -->
