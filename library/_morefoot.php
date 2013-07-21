@@ -1,7 +1,7 @@
 <?php 
-	global $pagelines_ID;
+	global $lebenswelt_ID;
 	global $bbpress_forum;
-	if(($bbpress_forum && pagelinesforum('hide_bottom_sidebars')) || !pagelines('bottom_sidebars') || pagelines('hide_bottom_sidebars', $pagelines_ID)) $hide_footer = true;
+	if(($bbpress_forum && lebensweltforum('hide_bottom_sidebars')) || !lebenswelt('bottom_sidebars') || lebenswelt('hide_bottom_sidebars', $lebenswelt_ID)) $hide_footer = true;
 	else $hide_footer = false;		
 ?>
 <?php if(!$hide_footer):?>
@@ -10,7 +10,7 @@
 		
 		<div class="wcontain fix span4">	
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Left') ) : ?>
-				<?php if(!pagelines('sidebar_no_default')):?>
+				<?php if(!lebenswelt('sidebar_no_default')):?>
 					<div class="widget">
 						<h3><?php _e('Looking for something?',TDOMAIN);?></h3>
 						<p><?php _e('Use the form below to search the site:',TDOMAIN);?></p>
@@ -23,7 +23,7 @@
 
 		<div class="wcontain span4">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Middle') ) : ?>
-				<?php if(!pagelines('sidebar_no_default')):?>
+				<?php if(!lebenswelt('sidebar_no_default')):?>
 					<div class="widget">
 						<h3><?php _e('Archives');?></h3><p><?php _e('All entries, chronologically...',TDOMAIN);?></p><ul><?php wp_get_archives('type=monthly&limit=12'); ?> </ul>
 
@@ -35,7 +35,7 @@
 
 		<div class="wcontain span4">
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Right') ) : ?>
-				<?php if(!pagelines('sidebar_no_default')):?>
+				<?php if(!lebenswelt('sidebar_no_default')):?>
 					<div class="widget">
 					<h3><?php _e('Visit our friends!',TDOMAIN);?></h3><p><?php _e('A few highly recommended friends...',TDOMAIN);?></p><ul><?php wp_list_bookmarks('title_li=&categorize=0'); ?></ul>
 					</div>

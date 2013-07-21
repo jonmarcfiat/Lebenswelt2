@@ -1,8 +1,8 @@
 <?php
 
-// This file has all the html used in PageLines dynamic plugins 
+// This file has all the html used in Lebenswelt dynamic plugins 
 
-function pagelines_draw_carousel(){?>		
+function lebenswelt_draw_carousel(){?>		
 	<div class="prev"></div>
 	<div class="next"></div>
 	<div class="thecarousel">
@@ -10,10 +10,10 @@ function pagelines_draw_carousel(){?>
 
 			<?php 
 			// Pictures in Carousel
-			if(m_pagelines('carouselitems', $post->ID)) $carouselitems = m_pagelines('carouselitems', $post->ID);
+			if(m_lebenswelt('carouselitems', $post->ID)) $carouselitems = m_lebenswelt('carouselitems', $post->ID);
 			else $carouselitems = 30;
 	
-			if(m_pagelines('carousel_mode', $post->ID) == 'posts'):?>
+			if(m_lebenswelt('carousel_mode', $post->ID) == 'posts'):?>
 				<?php $recentposts = get_posts('numberposts='.$carouselitems.'&offset=0');?>
 				<?php foreach($recentposts as $key => $rpost):?>
 					<?php setup_postdata($rpost);?>
@@ -31,13 +31,13 @@ function pagelines_draw_carousel(){?>
 						</li>
 
 				<?php endforeach;?>
-			<?php elseif(function_exists('nggDisplayRandomImages')  && m_pagelines('carousel_mode', $post->ID) == 'ngen_gallery'):?>
-						<?php 	if(m_pagelines('carousel_ngen_gallery', $post->ID)) $ngen_id = m_pagelines('carousel_ngen_gallery', $post->ID);
+			<?php elseif(function_exists('nggDisplayRandomImages')  && m_lebenswelt('carousel_mode', $post->ID) == 'ngen_gallery'):?>
+						<?php 	if(m_lebenswelt('carousel_ngen_gallery', $post->ID)) $ngen_id = m_lebenswelt('carousel_ngen_gallery', $post->ID);
 								else $ngen_id = 1; 
 						?>
 						<?php echo do_shortcode('[nggallery id='.$ngen_id.' template=plcarousel]');?>
 				
-			<?php elseif(function_exists('get_flickrRSS') && m_pagelines('carousel_mode', $post->ID) == 'flickr'):?>
+			<?php elseif(function_exists('get_flickrRSS') && m_lebenswelt('carousel_mode', $post->ID) == 'flickr'):?>
 			
 				<?php 
 					get_flickrRSS(array(
@@ -55,7 +55,7 @@ function pagelines_draw_carousel(){?>
 
 <?php } 
 
-function pagelines_draw_fboxes(){?>
+function lebenswelt_draw_fboxes(){?>
 	<div class="fboxes fix">
 			<?php 
 			// inserts a clearing element at the end of each line of boxes
@@ -94,7 +94,7 @@ function pagelines_draw_fboxes(){?>
 	
 <?php }
 
-function pagelines_draw_slider(){?>
+function lebenswelt_draw_slider(){?>
 	<div id="feature" class="fix">
 		<div id="cycle">
 
@@ -135,14 +135,14 @@ function pagelines_draw_slider(){?>
 		
 		</div>
 		<div id="featurenav">
-			<?php if(pagelines('timeout') != 0 && pagelines('feature_playpause')):?><span class="playpause pause"><span>&nbsp;</span></span><?php endif;?>
+			<?php if(lebenswelt('timeout') != 0 && lebenswelt('feature_playpause')):?><span class="playpause pause"><span>&nbsp;</span></span><?php endif;?>
 		</div>
 		<div class="clear"></div>
 	</div>
 	<div class="clear"></div>
 <?php }
 
-function pagelines_draw_highlight(){?>
+function lebenswelt_draw_highlight(){?>
 	<?php if(get_post_meta($post->ID, 'featuremedia', true)):?><div class="fmedia"><?php echo do_shortcode(get_post_meta($post->ID, 'featuremedia', true));?></div><?php endif;?>
 	<div class="fcontent">
 		<?php if(get_post_meta($post->ID, 'featuretitle', true)):?><h1><?php echo do_shortcode(get_post_meta($post->ID, 'featuretitle', true));?></h1><?php endif;?>

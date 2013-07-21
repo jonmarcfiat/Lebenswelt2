@@ -9,9 +9,9 @@ function do_global_javascript(){
 }
 
 // Title and External Script Integration
-add_action('wp_head', 'do_pagelines_title');
-function do_pagelines_title(){?>		
-	<?php if( pagelines_bbpress_forum() ):?>
+add_action('wp_head', 'do_lebenswelt_title');
+function do_lebenswelt_title(){?>		
+	<?php if( lebenswelt_bbpress_forum() ):?>
 		<title><?php bb_title() ?></title>
 	<?php else:?>
 		<title><?php if(is_front_page()) { echo SITENAME; } else { wp_title(''); } ?></title>
@@ -19,12 +19,12 @@ function do_pagelines_title(){?>
 <?php }
 
 // Meta Images e.g. Favicon, Apple Images
-add_action('wp_head', 'do_pagelines_meta');
-function do_pagelines_meta(){?>
-	<?php if(pagelines('favicon')):?><link rel="shortcut icon" href="<?php echo pagelines('favicon');?>" type="image/x-icon" /><?php endif;?>
-	<?php if(pagelines('touchicon')):?><link rel="apple-touch-icon" href="<?php echo pagelines('touchicon');?>" /><?php endif;?>
+add_action('wp_head', 'do_lebenswelt_meta');
+function do_lebenswelt_meta(){?>
+	<?php if(lebenswelt('favicon')):?><link rel="shortcut icon" href="<?php echo lebenswelt('favicon');?>" type="image/x-icon" /><?php endif;?>
+	<?php if(lebenswelt('touchicon')):?><link rel="apple-touch-icon" href="<?php echo lebenswelt('touchicon');?>" /><?php endif;?>
 
-	<?php if( pagelines_bbpress_forum() ): // Load bbPress headers ?>
+	<?php if( lebenswelt_bbpress_forum() ): // Load bbPress headers ?>
 		<?php bb_feed_head(); ?>
 		<?php bb_head(); ?>
 		<link rel="stylesheet" href="<?php bb_stylesheet_uri(); ?>" type="text/css" />
@@ -38,19 +38,19 @@ function do_pagelines_meta(){?>
 	<?php include (THEME_LIB . '/_dcss.php'); ?>	
 <?php }
 
-add_action('pagelines_code_after_head', 'pagelines_headerscripts');
-function pagelines_headerscripts(){
-	e_pagelines('headerscripts');
+add_action('lebenswelt_code_after_head', 'lebenswelt_headerscripts');
+function lebenswelt_headerscripts(){
+	e_lebenswelt('headerscripts');
 }	
 
-add_action('pagelines_code_before_html', 'pagelines_postheaderscripts');
-function pagelines_postheaderscripts(){
-	e_pagelines('asynch_analytics'); 
+add_action('lebenswelt_code_before_html', 'lebenswelt_postheaderscripts');
+function lebenswelt_postheaderscripts(){
+	e_lebenswelt('asynch_analytics'); 
 }
 	
 // Fix IE issues to the extent possible...
-function pagelines_fix_ie($imagestofix = ''){?>
-	<?php if(pagelines('google_ie')):?>
+function lebenswelt_fix_ie($imagestofix = ''){?>
+	<?php if(lebenswelt('google_ie')):?>
 	<!--[if lt IE 8]>
 		<script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
 	<![endif]-->

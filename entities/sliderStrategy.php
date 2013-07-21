@@ -1,8 +1,6 @@
 <?php
 	
-/* This is the slider entity
-
-Make sure to upload new slides to /wp-content/uploads/ for ease of client replacement
+/* This is the slider entity (for Strategy)
 
 */
 
@@ -21,7 +19,7 @@ Make sure to upload new slides to /wp-content/uploads/ for ease of client replac
 <div id="myCarousel" class="carousel slide">
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item"><a href="/websites#responsive"><img src="/wp-content/uploads/slider/slideWelcome.png" /></a></div>
+    <div class="active item"><img src="/wp-content/uploads/slider/slideWelcome.png" /></a></div>
     <div class="item"><img src="../wp-content/uploads/slide2.jpg" /></div>
     <div class="item"><img src="../wp-content/uploads/slide3.jpg" /></div>
     <!--<div class="item"><img src="../wp-content/uploads/slide3.jpg" /><div class="carousel-caption"><h4>Optional Caption</h4></div></div>-->

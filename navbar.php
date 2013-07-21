@@ -6,18 +6,14 @@
 <div class="hidden-phone navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<!--
-			<a class="brand" href="#">
-			<img src="../wp-content/uploads/logos/fiat-logo-small.png" height="20px">
+			<a class="brand" href="/">
+			<img src="/wp-content/uploads/logos/fiat-logo-small2.png" height="25px">
 			</a>
-			-->
 			<ul class="nav">
-				<li class="divider-vertical"></li>
-				<li><a href="/"><i class="icon-home icon-white" style="margin: 3px 8px;"></i></a></li>
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-user icon-white" style="margin: 3px 8px;"></i> Team
+					<i class="icon-flag icon-white" style="margin: 2px 8px;"></i> About
 					</a>
 						<ul class="dropdown-menu">
 							<li><a href="/team/philosophy">Philosophy</a></li>
@@ -28,25 +24,24 @@
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-fire icon-white" style="margin: 3px 8px;"></i> Solutions
+					<i class="icon-fire icon-white" style="margin: 2px 8px;"></i> Solutions
 					</a>
 						<ul class="dropdown-menu">
 							<li><a href="/websites">Websites</a></li>
+							<li><a href="/management">Management</a></li>
 							<li><a href="/branding">Branding</a></li>	
-							<li><a href="/hosting">Hosting</a></li>
 							<li><a href="/portfolio/ethika-politika">Strategy</a></li>								
 						</ul>
 				</li>
 				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=77"><i class="icon-bookmark icon-white" style="margin: 3px 8px;"></i> Portfolio</a></li>
+				<li><a href="/?page_id=77"><i class="icon-bookmark icon-white" style="margin: 2px 8px;"></i> Portfolio</a></li>
 				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=840"><i class="icon-list icon-white" style="margin: 3px 8px;"></i> Blog</a></li>
-				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=540" style="background: #ECBE13; color: #fff;"><i class="icon-share icon-white" style="margin: 3px 10px;"></i> Get a Quote</a></li>
+				<!--<li><a href="/?page_id=840"><i class="icon-tasks icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
+				<li class="divider-vertical"></li>-->
+				<li><a href="/?page_id=540" style="background: #555; color: #fff;"><i class="icon-gift icon-white" style="margin: 2px 10px;"></i> Get a Free Quote</a></li>
 				<li class="divider-vertical"></li>
 			</ul>
 			<img src="http://fiatinsight.com/wp-content/uploads/logos/fiat-circle-logo.png" style="float:right; margin-top: 5px; opacity: .7;" height="28px">
-			<a href="/clients"><button class="btn btn-primary" style="float:right; margin-right: 30px;">Clients</button></a>
 		</div>
 	</div>
 </div>
@@ -84,7 +79,7 @@
 
 <!--
 <?php function nav_fallback() {?>
-	<ul id="menu-nav" class="<?php if(pagelines('enable_drop_down')) echo 'mnav dropdown fix'; else echo 'mnav fix';?>">
+	<ul id="menu-nav" class="<?php if(lebenswelt('enable_drop_down')) echo 'mnav dropdown fix'; else echo 'mnav fix';?>">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
 	</ul>
 		<?php	}  if(function_exists('wp_nav_menu')):?>

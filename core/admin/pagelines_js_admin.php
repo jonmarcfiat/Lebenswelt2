@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
 	setSortable();
 
 	jQuery('#tselect').change(function() {
-		<?php global $pl_section_factory; global $pagelines_template;?>
+		<?php global $pl_section_factory; global $lebenswelt_template;?>
 		stemplate = jQuery(this).val();
 		jQuery('.selected_template').removeClass('selected_template');
 		jQuery('.'+stemplate).addClass('selected_template');
@@ -24,7 +24,7 @@ jQuery(document).ready(function(){
 	});
 
 	function setSortable(){
-		<?php global $pl_section_factory; global $pagelines_template;?>
+		<?php global $pl_section_factory; global $lebenswelt_template;?>
 		
 		setEmpty(".selected_template #sortable_template");
 		setEmpty(".selected_template #sortable_sections");
@@ -43,11 +43,11 @@ jQuery(document).ready(function(){
 		            var order = jQuery('.selected_template #sortable_template').sortable('serialize');
 		            //alert(order);
 					var data = {
-							action: 'pagelines_save_sortable',
+							action: 'lebenswelt_save_sortable',
 							orderdata: order,
 							template: stemplate, 
 							field: 'sections', 
-							templatemap: <?php echo json_encode($pagelines_template->template_map);?>
+							templatemap: <?php echo json_encode($lebenswelt_template->template_map);?>
 						};
 
 						// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
@@ -76,11 +76,11 @@ jQuery(document).ready(function(){
 
 		
 		<?php 
-			if(get_option('pagelines_layout_map')) $tmap = get_option('pagelines_layout_map');
+			if(get_option('lebenswelt_layout_map')) $tmap = get_option('lebenswelt_layout_map');
 			if(isset($tmap['last_edit'])) $last_edit = $tmap['last_edit'];
 			else $last_edit = null;
 			
-			$load_layout = new PageLinesLayout($last_edit);
+			$load_layout = new LebensweltLayout($last_edit);
 			$load_margin = $load_layout->margin->bwidth;
 			$load_west = $load_layout->west->bwidth;
 			$load_east = $load_layout->east->bwidth;
@@ -118,7 +118,7 @@ jQuery(document).ready(function(){
 			jQuery('.'+LayoutMode).addClass('selectededitor');
 		
 			<?php foreach(get_the_layouts() as $layout):
-				$mylayout = new PageLinesLayout($layout);
+				$mylayout = new LebensweltLayout($layout);
 				$default_margin = $mylayout->margin->bwidth;
 				?>
 				if (LayoutMode == '<?php echo $layout;?>') { 
@@ -198,8 +198,8 @@ jQuery(document).ready(function(){
 									,	resizeWhileDragging:	true
 									,	west__resizable:		true	// Set to TRUE to activate dynamic margin
 									,	east__resizable:		true	// Set to TRUE to activate dynamic margin
-									,	east__resizerClass: 	'pagelines-resizer-east'
-									,	west__resizerClass: 	'pagelines-resizer-west'
+									,	east__resizerClass: 	'lebenswelt-resizer-east'
+									,	west__resizerClass: 	'lebenswelt-resizer-west'
 									,	east__size:				margin
 									,	west__size:				margin
 									,	east__minSize:			10
@@ -210,8 +210,8 @@ jQuery(document).ready(function(){
 									    var width  = paneState.innerWidth;
 										var realwidth = width * 2;
 										jQuery("."+LayoutMode+" .margin-east").width(width);
-										var position = jQuery("."+LayoutMode+" .pagelines-resizer-west").position();
-										jQuery("."+LayoutMode+" .pagelines-resizer-east").css('right', position.left);
+										var position = jQuery("."+LayoutMode+" .lebenswelt-resizer-west").position();
+										jQuery("."+LayoutMode+" .lebenswelt-resizer-east").css('right', position.left);
 										updateDimensions(LayoutMode);
 									} 
 									, 	east__onresize: function (pane, $Pane, paneState) {
@@ -219,8 +219,8 @@ jQuery(document).ready(function(){
 									    var width  = paneState.innerWidth;
 										var realwidth = width * 2;
 										jQuery("."+LayoutMode+" .margin-west").width(width);
-										var position = jQuery("."+LayoutMode+" .pagelines-resizer-east").css('right');
-										jQuery("."+LayoutMode+" .pagelines-resizer-west").css('left', position);
+										var position = jQuery("."+LayoutMode+" .lebenswelt-resizer-east").css('right');
+										jQuery("."+LayoutMode+" .lebenswelt-resizer-west").css('left', position);
 										updateDimensions(LayoutMode);
 									}
 						});
@@ -260,7 +260,7 @@ jQuery(document).ready(function(){
 		  action: '<?php echo admin_url("admin-ajax.php"); ?>',
 		  name: clickedID, // File upload name
 		  data: { // Additional data to send
-				action: 'pagelines_ajax_post_action',
+				action: 'lebenswelt_ajax_post_action',
 				type: 'upload',
 				data: clickedID },
 		  autoSubmit: true, // Submit file after selection
@@ -292,7 +292,7 @@ jQuery(document).ready(function(){
 
 				var previewSize = clickedObject.parent().find('.image_preview_size').attr('value');
 
-				var buildReturn = '<img style="width:'+previewSize+'px;" class="pagelines_image_preview" id="image_'+clickedID+'" src="'+response+'" alt="" />';
+				var buildReturn = '<img style="width:'+previewSize+'px;" class="lebenswelt_image_preview" id="image_'+clickedID+'" src="'+response+'" alt="" />';
 
 				jQuery(".upload-error").remove();
 				jQuery("#image_" + clickedID).remove();	
@@ -316,7 +316,7 @@ jQuery(document).ready(function(){
 			var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
 
 			var data = {
-				action: 'pagelines_ajax_post_action',
+				action: 'lebenswelt_ajax_post_action',
 				type: 'image_reset',
 				data: theID
 			};

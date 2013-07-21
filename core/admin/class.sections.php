@@ -2,15 +2,15 @@
 /**
  * 
  *
- *  API for creating and using PageLines sections
+ *  API for creating and using Lebenswelt sections
  *
  *
- *  @package PageLines Core
+ *  @package Lebenswelt Core
  *  @subpackage Sections
  *  @since 4.0
  *
  */
-class PageLinesSection {
+class LebensweltSection {
 
 	var $id;		// Root id for section.
 	var $name;		// Name for this section.
@@ -51,7 +51,7 @@ class PageLinesSection {
 	 *
 	 */
 	function section_template() {
-		die('function PageLinesSection::section_template() must be over-ridden in a sub-class.');
+		die('function LebensweltSection::section_template() must be over-ridden in a sub-class.');
 	}
 
 	function before_section(){?>
@@ -95,13 +95,13 @@ class PageLinesSection {
 /********** END OF SECTION CLASS  **********/
 
 /**
- * Singleton that registers and instantiates PageLinesSection classes.
+ * Singleton that registers and instantiates LebensweltSection classes.
  *
- * @package PageLines Core
+ * @package Lebenswelt Core
  * @subpackage Sections
  * @since 4.0
  */
-class PageLinesSectionFactory {
+class LebensweltSectionFactory {
 	var $sections  = array();
 
 	function __contruct() { }
@@ -120,11 +120,11 @@ class PageLinesSectionFactory {
 /**
  * Registers and loads the section files
  *
- * @package PageLines Core
+ * @package Lebenswelt Core
  * @subpackage Sections
  * @since 4.0
  */
-function pagelines_register_section($section_class, $section_folder, $init_file = null){
+function lebenswelt_register_section($section_class, $section_folder, $init_file = null){
 	global $pl_section_factory;
 
 	if(!isset($init_file) && !strpos($init_file, '.php')) $init_file = $section_folder.'.php';
@@ -153,7 +153,7 @@ function pagelines_register_section($section_class, $section_folder, $init_file 
 /**
  * Prints the persistent PHP for sections.
  *
- * @package PageLines Core
+ * @package Lebenswelt Core
  * @subpackage Sections
  * @since 4.0
  */

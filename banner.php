@@ -1,10 +1,10 @@
 <div id="header" class="fix container-fluid">
 	<div id="wrapper"><!-- Header wrapper -->
-				<div class="content fix span4">
+				<div class="content fix span3 borderbox">
 
-					<div class="headline span12">
-						<?php if(pagelines('custom_header')):?>
-							<a class="home" href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name');?>"><img src="<?php echo pagelines('custom_header');?>" alt="<?php bloginfo('name');?>" /></a>
+					<div class="headline">
+						<?php if(lebenswelt('custom_header')):?>
+							<a class="home" href="<?php echo get_option('home'); ?>/" title="<?php bloginfo('name');?>"><img src="<?php echo lebenswelt('custom_header');?>" alt="<?php bloginfo('name');?>" /></a>
 						<?php else:?>
 						<h1 class="site-title"><a class="home" href="<?php echo get_option('home'); ?>/" title="<?php _e('Home',TDOMAIN);?>"><?php bloginfo('name');?></a></h1>
 						<h6 class="site-description"><?php bloginfo('description');?></h6>
@@ -13,6 +13,14 @@
 
 				</div><!-- end span -->
 
+				<div class="span9 borderbox hidden-phone">
+					<ul class="hugenav hidden-phone" style="float:right;">
+						<li><a href="/websites">Build</a></li>
+						<li><a href="/portfolio/ethika-politika">Strategy</a></li>
+						<li><a href="/quotes">Quote</a></li>
+					</ul>
+				</div>
+				<!--
 				<div class="hidden-small hidden-tablet hidden-phone content fix span8">
 					<ul class="ch-grid">
 						<li></li>
@@ -46,6 +54,7 @@
 						</li>
 					</ul>
 				</div>
+				-->
 
 			</div><!-- end container -->
 			<!-- end header -->

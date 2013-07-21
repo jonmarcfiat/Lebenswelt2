@@ -19,7 +19,7 @@ Description: Styling Navbars
 
 	.nav > li {
 		font-size: 22px;
-		font-family: 'Signika', helvetica, arial, sans-serif;
+		font-family: 'Oxygen', helvetica, arial, sans-serif;
 		}
 
 	.nav > li > a {
@@ -46,6 +46,30 @@ Description: Styling Navbars
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 		text-transform: uppercase;
 		}
+		
+	/* Huge Nav */
+		
+	.hugenav {
+		font-size: 45px;
+		margin: 140px 0 0;
+	}
+	
+	.hugenav a {
+		color: #fff;
+		text-shadow: 0 0 8px #555;
+		font-family: 'Oxygen', helvetica, sans-serif;
+		opacity: .6;
+	}
+	
+	.hugenav li {
+		display: inline-block;
+		padding: 20px;
+		border-top: 10px solid transparent;
+	}
+	
+	.hugenav li:hover, .hugenav .current {
+		border-top: 10px solid #3F88AD;
+	}
 
 	/* Bootstrap navigation list class
 	 * Use to impose further list stylization on .nav classes
@@ -468,7 +492,7 @@ Description: Styling Navbars
 	.navbar .brand {
 		display: block;
 		float: left;
-		padding: 8px 20px 12px;
+		padding: 5px 10px;
 		margin: auto auto;
 		font-family: ubuntu, arial, sans-serif;
 		font-size: 25px;
@@ -637,13 +661,13 @@ Description: Styling Navbars
 	.navbar .nav > li {
 		display: block;
 		float: left;
-		font-size: 16px;
+		font-size: 14px;
 		}
 
 	.navbar .nav > li > a {
 		float: none;
 		padding: 9px 10px 9px;
-		line-height: 22px;
+		line-height: 20px;
 		color: #999999;
 		text-decoration: none;
 		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);

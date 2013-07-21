@@ -1,4 +1,4 @@
-<?php do_action('pagelines_before_html');?>
+<?php do_action('lebenswelt_before_html');?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> class="no-js">
@@ -7,8 +7,8 @@
 
 	<!-- Meta Images -->
 	
-		<?php if(pagelines('favicon')):?><link rel="shortcut icon" href="<?php echo pagelines('favicon');?>" type="image/x-icon" /><?php endif;?>
-		<?php if(pagelines('touchicon')):?><link rel="apple-touch-icon" href="<?php echo pagelines('touchicon');?>" /><?php endif;?>
+		<?php if(lebenswelt('favicon')):?><link rel="shortcut icon" href="<?php echo lebenswelt('favicon');?>" type="image/x-icon" /><?php endif;?>
+		<?php if(lebenswelt('touchicon')):?><link rel="apple-touch-icon" href="<?php echo lebenswelt('touchicon');?>" /><?php endif;?>
 
 	<!-- Title -->
 	
@@ -19,7 +19,7 @@
 		<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<?php if ( is_single() || is_page()) wp_enqueue_script( 'comment-reply' ); ?> <!-- This makes the comment box appear where the ‘reply to this comment’ link is -->
-		<?php  wp_enqueue_script("jquery"); ?>
+		<?php /* wp_enqueue_script("jquery"); */ ?>
 
 	<!-- Stylesheets -->
 
@@ -35,19 +35,19 @@
 		<?php get_template_part ('library/_ie_fixes'); ?>
 
 	<!-- Font Replacement -->
-
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Mate:400,400italic' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Signika:400' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
   	
-		<?php if (pagelines('headerscripts')) echo pagelines('headerscripts');?>
+		<?php if (lebenswelt('headerscripts')) echo lebenswelt('headerscripts');?>
 
 		<?php wp_head(); ?>
 
 	<!-- Call the Scripts -->
 
 		<?php get_template_part ('scripts/scripts');?>
+		
 
 </head><!-- End Head -->
 

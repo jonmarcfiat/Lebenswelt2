@@ -44,7 +44,7 @@ Description: Styling for universal elements: typography, links, alignment, etc
 	h1 {
 		font-size: 28px;
 		padding: 0 0 10px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		color: #666;
 		font-weight: 400;
 		line-height: 1.2em;
@@ -52,35 +52,35 @@ Description: Styling for universal elements: typography, links, alignment, etc
 
 	h2 {
 		font-size: 24px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 
 	h3 {
 		font-size: 22px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 		
 	h4 {
 		font-size: 20px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 	
 	h5 {
 		font-size: 18px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
 	
 	h6 {
 		font-size: 16px;
-		font-family: 'Quando', helvetica, sans-serif;
+		font-family: 'Oxygen', helvetica, sans-serif;
 		font-weight: 400px;
 		padding: 0 0 5px;
 		}
@@ -101,10 +101,11 @@ Description: Styling for universal elements: typography, links, alignment, etc
 
 	p,.p {
 		margin-bottom: 1em;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 1.4em;
-		color: #777;
-		font-family: 'Mate', helvetica, arial, sans-serif;
+		color: #888;
+		font-weight: 300;
+		font-family: 'Oxygen', helvetica, arial, sans-serif;
 		}
 
 	p small {
@@ -177,14 +178,20 @@ Description: Styling for universal elements: typography, links, alignment, etc
 	.lead {
 		color: #556270;
 		margin-bottom: 18px;
-		font-size: 24px;
+		font-size: 35px;
 		font-weight: 200;
-		line-height: 32px;
+		line-height: 36px;
 		text-shadow: none;
 		}
+		
+	.support {
+		color: #3F88AD;
+		font-size: 25px;
+		line-height: 30px;
+	}
 	
 	.subtle {
-		font-size: 18px;
+		font-size: 16px;
 		color: #aaa;
 		}
 		

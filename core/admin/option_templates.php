@@ -1,6 +1,6 @@
 <?php 
 
-function pagelines_theme_options() {
+function lebenswelt_theme_options() {
 	
 	if(VPRO) $intro = '<small><strong>Welcome to '.THEMENAME.' by <a href="http://fiatinsight.com">Fiat | Insight</a>.</strong> This section allows you to customize your theme.</small>';
 	else $intro = '<small><strong>Welcome to '.THEMENAME.' theme options.</strong> This section allows you to customize your theme.<br/>
@@ -32,7 +32,7 @@ function pagelines_theme_options() {
 				<div id="vpro_billboard">
 					<div class="vpro_desc">
 						<strong style="font-size: 1.2em">Get the Pro Version </strong><br/>
-						<?php echo THEMENAME;?> is the free version of <?php echo PROVERSION;?>, a premium theme by <a href="http://www.pagelines.com" target="_blank">PageLines</a>.<br/> 
+						<?php echo THEMENAME;?> is the free version of <?php echo PROVERSION;?>, a premium theme by <a href="http://www.lebenswelt.com" target="_blank">Lebenswelt</a>.<br/> 
 						Buy <?php echo PROVERSION;?> to get the professional page templates, premium options and dynamic control you'll need maximize your web marketing and visitor experience.<br/> 
 						
 						<?php if(defined('PROBUY')):?><a href="<?php echo PROBUY;?>"><strong>Buy Now &rarr;</strong></a> |<?php endif;?>
@@ -61,7 +61,7 @@ function pagelines_theme_options() {
 											
 											$engine_args = 'version='.$option_version.'&img_width='. $image_preview. '&selectvalues='.$serialize_subvalues.'&optionicon='. $option_icon.'&layout='.$option_layout;
 											if(isset($o['wp_option'])) $optionvalue = get_option($optionid);
-											else $optionvalue = pagelines($optionid);
+											else $optionvalue = lebenswelt($optionid);
 											option_engine($o['type'], $optionid, $optionvalue, $o['title'], $o['shortexp'], $o['exp'], $option_label, $engine_args);?>
 						<?php endif;?>
 					<?php endforeach; ?>
@@ -74,10 +74,10 @@ function pagelines_theme_options() {
 	<?php get_option_footer('option', $save_button);?>
 <?php }
 
-function pagelines_feature_options() {
+function lebenswelt_feature_options() {
 	
 		$intro = '<small><strong>Welcome to '.THEMENAME.' feature setup.</strong> This section allows you to customize this theme\'s feature templates. <br/>
-		We hope your enjoying this premium theme from <a href="http://www.pagelines.com">PageLines</a>.</small>';
+		We hope your enjoying this premium theme from <a href="http://www.lebenswelt.com">Lebenswelt</a>.</small>';
 		$save_button = "Save Setup";
 		$option_type = "feature";
 		
@@ -92,8 +92,8 @@ function pagelines_feature_options() {
 			<li><a class="<?php echo $menuitem;?> tabnav-item" href="#<?php echo $menuitem;?>"><span><?php echo ucwords(str_replace('_',' ',$menuitem));?></span></a></li>
 			<?php endforeach;?>
 			
-			<?php if(is_array(pagelines('features'))):?>
-				<?php foreach(pagelines('features') as $key => $feature):?>
+			<?php if(is_array(lebenswelt('features'))):?>
+				<?php foreach(lebenswelt('features') as $key => $feature):?>
 					<li>
 						<a onClick="" class="feature <?php echo 'feature'.$key;?>" href="#<?php echo 'feature'.$key;?>">
 							<span>
@@ -107,8 +107,8 @@ function pagelines_feature_options() {
 					</li>
 				<?php endforeach;?>
 			<?php endif;?>
-			<?php if(is_array(pagelines('fboxes'))):?>
-				<?php foreach(pagelines('fboxes') as $key => $fbox):?>
+			<?php if(is_array(lebenswelt('fboxes'))):?>
+				<?php foreach(lebenswelt('fboxes') as $key => $fbox):?>
 					<li>
 						<a onClick="" class="fbox" href="#<?php echo 'fbox'.$key;?>">
 							<span>
@@ -144,7 +144,7 @@ function pagelines_feature_options() {
 							
 							$engine_args = 'version='.$option_version.'&img_width='. $image_preview. '&selectvalues='.$serialize_subvalues.'&optionicon='. $option_icon.'&layout='.$option_layout;
 							if(isset($o['wp_option'])) $optionvalue = get_option($optionid);
-							else $optionvalue = pagelines($optionid);
+							else $optionvalue = lebenswelt($optionid);
 							option_engine($o['type'], $optionid, $optionvalue,$o['title'], $o['shortexp'], $o['exp'], $option_label, $engine_args);
 						?>
 											
@@ -155,8 +155,8 @@ function pagelines_feature_options() {
 			
 			<?php $fset = get_feature_setup();?>
 			
-			<?php if(is_array(pagelines('features'))):?>
-				<?php foreach(pagelines('features') as $key => $feature):?>
+			<?php if(is_array(lebenswelt('features'))):?>
+				<?php foreach(lebenswelt('features') as $key => $feature):?>
 					
 					<div id="<?php echo 'feature'.$key;?>" class="featuretab tabinfo fix">
 						<div class="tabtitle">
@@ -201,8 +201,8 @@ function pagelines_feature_options() {
 
 			<?php $fboxset = get_fbox_setup();?>
 
-			<?php if(is_array(pagelines('fboxes'))):?>
-				<?php foreach(pagelines('fboxes') as $key => $fbox):?>
+			<?php if(is_array(lebenswelt('fboxes'))):?>
+				<?php foreach(lebenswelt('fboxes') as $key => $fbox):?>
 					
 					<div id="<?php echo 'fbox'.$key;?>" class="tabinfo fix">
 						<div class="tabtitle">

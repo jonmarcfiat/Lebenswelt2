@@ -1,4 +1,4 @@
-/* PageLines Core CSS Framework */
+/* Lebenswelt Core CSS Framework */
 
 p,.p{margin-bottom: 1em;}
 a:focus{outline:1px dotted invert;}
@@ -219,7 +219,7 @@ sup {font-size:.7em;vertical-align: top;}
 sub {font-size:.7em;vertical-align: bottom;}
 
 
-/* PageLines Commonly Used */
+/* Lebenswelt Commonly Used */
 	.subtle {color: #999;font-size: .9em;}
 	.frame {
 		padding: 8px;
