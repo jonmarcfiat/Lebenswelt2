@@ -244,6 +244,10 @@ Description: Styling Navbars
 		margin-bottom: 1px;
 		}
 
+	/* Prevent the WP-generated Menu from Flashing Open on Page Load */
+
+	ul.sub-menu {display:none;}
+
 	/* Bootstrap dropdown navigation class for tabs and pills */
 
 	.nav-tabs .dropdown-menu {
