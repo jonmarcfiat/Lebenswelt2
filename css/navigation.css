@@ -1302,6 +1302,12 @@ footer[role="contentinfo"] {
   background: #ddd;
 }
 
+/* Move Fixed Navbar below the admin bar when viewing site */
+
+body.admin-bar .navbar-fixed-top {
+	top: 28px !important;
+	}
+
 @media screen and (min-width: 45.0625em) {
   #top .nav-btn {
     border: 0;
