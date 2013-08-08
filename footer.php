@@ -112,25 +112,12 @@
 </div> <!-- end #site -->
 
 
-<!-- Footer Scripts Go Here -->
 
-	<!-- Facebook script -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=304418233011542";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Call the Footer Scripts -->
 
-	<?php if (lebenswelt('footerscripts')) echo lebenswelt('footerscripts');?>
+<?php get_template_part ('scripts/footerscripts');?>
 
 
-	<script src="/wp-content/themes/Lebenswelt2/js/main.js"></script>
-	<script src="/wp-content/themes/Lebenswelt2/js/modernizr.custom.28468.js"></script>
-
-<!-- End Footer scripts -->
 <?php wp_footer(); ?>
 </body>
 </html>
