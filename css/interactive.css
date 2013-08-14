@@ -152,10 +152,10 @@ input[type="file"] {
   line-height: 18px \9;
 }
 
-select {
+/* select {
   width: 220px;
   background-color: #ffffff;
-}
+} */
 
 select[multiple],
 select[size] {
