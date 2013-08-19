@@ -1,6 +1,6 @@
 <div id="header" class="fix container-fluid">
 	<div id="wrapper"><!-- Header wrapper -->
-				<div class="content fix span3 borderbox">
+				<div class="content fix span8 borderbox">
 
 					<div class="headline">
 						<?php if(lebenswelt('custom_header')):?>
@@ -13,7 +13,7 @@
 
 				</div><!-- end span -->
 
-				<div class="span9 borderbox hidden-phone">
+				<div class="span4 borderbox hidden-phone">
 					<ul class="hugenav hidden-phone" style="float:right;">
 						<li><a href="/websites">Build</a></li>
 						<li><a href="/portfolio/ethika-politika">Strategy</a></li>
