@@ -13,4 +13,4 @@ Lebenswelt v.2 is a WordPress codebase developed by @FiatInsight. It builds subs
 // Structure
 The codebase is broken down into substantial elements based on functional context within WordPress. Three files control the basic page layout and general schematic: header.php, page-layout.php, and footer.php. Subfiles call to separate scripts and layouts, grouped by lowest common feature with rapid, flexible development in mind.
 
-JM
+JM2
