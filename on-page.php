@@ -34,7 +34,7 @@
 		?>
 	</div>
 		
-		<?php if(!$full_width_page) get_sidebar();?>
+		<?php if(!$full_width_page)get_sidebar();?>
 
 	<div class="clear"></div>
 

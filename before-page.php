@@ -12,10 +12,6 @@
 	List conditional calls to entities below, for example:
 
 */
-
-	if (is_front_page())
-		get_template_part('entities/portfolio');
-
 	if (is_front_page())
 		get_template_part('entities/brand');
 	

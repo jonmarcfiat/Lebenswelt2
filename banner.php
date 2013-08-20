@@ -15,9 +15,8 @@
 
 				<div class="span4 borderbox hidden-phone">
 					<ul class="hugenav hidden-phone" style="float:right;">
-						<li><a href="/websites">Build</a></li>
-						<li><a href="/portfolio/ethika-politika">Strategy</a></li>
-						<li><a href="/quotes">Quote</a></li>
+						<li><a href="/join">Join</a></li>
+						<li><a href="/donate">Donate</a></li>
 					</ul>
 				</div>
 				<!--

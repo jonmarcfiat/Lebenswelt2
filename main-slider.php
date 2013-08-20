@@ -1,7 +1,7 @@
 <!-- ####### -- Parallax Slider -- ####### -->
 	
-	<?php if( is_page(array('x')) ) :?>
-		<div id="slider" class="css-slideshow span12"><!-- IMPORTANT: Set Span8 for Nav or Span12 for Navhor -->
+	<?php if( is_page(array('#')) ) :?>
+		<div id="slider" class="css-slideshow span7"><!-- IMPORTANT: Set Span8 for Nav or Span12 for Navhor -->
 			<input id="button-1" type="radio" name="radio-set" class="css-selector-1" checked="checked" />
 			<label for="button-1" class="button-label-1"></label>				
 			<input id="button-2" type="radio" name="radio-set" class="css-selector-2" />
@@ -34,6 +34,22 @@
 		<div id="shadow"></div>
 
 		</div><!-- css-slideshow -->
+		<div class="slidermessage span5">
+				<div style="padding: 20px; background-color:white; height: 250px;  min-width:257px">
+					<h3>Welcome!</h3>
+					<p>We are a network of inquirers, converts, reverts, as well as life-long Catholics on an ongoing journey of faith.   </p>
+					 <a class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+					Explore
+						<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+							<!-- dropdown menu links -->
+							</ul>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Join &raquo;</button></a>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Donate &raquo;</button></a>
+					
+				</div>
+			</div>
 	<?php endif;?>
 
 <!-- end Parallax Slider -->
@@ -41,23 +57,41 @@
 
 <!-- ####### -- Auto Slider -- ####### -->
 
-<?php if( is_page(array('x')) ) :?>
+<?php if( is_page(array('Home')) ) :?>
 	<div class="container">
 	
-		<div id="myCarousel" class="carousel slide">
+		<div id="myCarousel" class="carousel slide span7">
   		<!-- Carousel items -->
 			<div class="carousel-inner">
-			    <div class="active item"><img src="../wp-content/uploads/slide1.jpg" /></a></div>
-			    <div class="item"><img src="../wp-content/uploads/slide2.jpg" /></div>
-			    <div class="item"><img src="../wp-content/uploads/slide3.jpg" /></div>
+			    <div class="active item"><img src="../wp-content/uploads/2013/08/pbslide-756x2501.png" /></div>
+			    <div class="item"><img src="../wp-content/uploads/2013/08/hffeature1-756x250-11.png" /></div>
+			    <div class="item"><img src="../wp-content/uploads/2013/08/hffeature1-756x250-11.png" /></div>
 		    	    <!--<div class="item"><img src="../wp-content/uploads/slide3.jpg" /><div class="carousel-caption"><h4>Optional Caption</h4></div></div>-->
 			</div>
  		 <!-- Carousel nav -->
  		 <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 		 <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
-
-	</div><!-- end container -->
+		<div class="slidermessage span5">
+				<div style="padding: 20px; background-color:white; height: 250px;  min-width:257px">
+					<h3>Welcome!</h3>
+					<p>We are a network of inquirers, converts, reverts, as well as life-long Catholics on an ongoing journey of faith.   </p>
+					 <a class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+					Explore
+						<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+							<!-- dropdown menu links -->
+							</ul>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Join &raquo;</button></a>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Donate &raquo;</button></a>
+					
+				</div>
+			</div>
+	</div>
+	
+	
+	<!-- end container -->
 <?php endif;?>
 
 <!-- end Auto Slider -->

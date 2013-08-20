@@ -58,7 +58,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 	.headline {
 		color:#000;
 		padding: 0px 0px;
-		opacity: .5;
+		opacity: 1;
 		}
 
 	.headline h1 a {
@@ -113,7 +113,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 		}
 
 	#footer  {
-		background: transparent url('/wp-content/uploads/bgs/footer-matte.png') top left repeat;
+		background: transparent url('/wp-content/uploads/2013/08/footer-matte.png') top left repeat;
 		padding: 10px 0 1.5em;
 		box-shadow: 0 0 45px #bbb;
 		}
