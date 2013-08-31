@@ -7,41 +7,37 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<a class="brand" href="/">
-			<img src="/wp-content/uploads/logos/fiat-logo-small2.png" height="25px">
-			</a>
+<img height="25px" src="/wp-content/uploads/2013/08/logo-red+transparent-2.png">
+</a>
 			<ul class="nav">
-				<li class="divider-vertical"></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-flag icon-white" style="margin: 2px 8px;"></i> About
-					</a>
-						<ul class="dropdown-menu">
-							<li><a href="/team/philosophy">Philosophy</a></li>
-							<li><a href="/team/people">People</a></li>
-							<li><a href="/team/partners">Partners</a></li>
-						</ul>
+				
+				<li><a href="/home"><i class="icon-home icon-white" style="margin: 3px 8px;"></i> Home </a></li>
+				
+				<li><a href="/about-us"><i class="icon-user icon-white" style="margin: 3px 8px;"></i> About Us</a></li>
+				
+				<li><a href="/blog"><i class="icon-list icon-white" style="margin: 3px 8px;"></i> Blog</a></li>
+<li><a href="/converts"><i class="icon-list icon-white" style="margin: 3px 8px;"></i> Conversion Stories</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+	<i class="icon-fire icon-white" style="margin: 3px 8px;"></i>Resources</a>
+					<ul class="dropdown-menu">
+						<li><a href="">1</a></li>
+						<li><a href="">	2</a></li>
+					</ul>
+
 				</li>
-				<li class="divider-vertical"></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="icon-fire icon-white" style="margin: 2px 8px;"></i> Solutions
-					</a>
-						<ul class="dropdown-menu">
-							<li><a href="/websites">Websites</a></li>
-							<li><a href="/management">Management</a></li>
-							<li><a href="/branding">Branding</a></li>	
-							<li><a href="/portfolio/ethika-politika">Strategy</a></li>								
-						</ul>
+				
+		    		<li><a href="/chnetwork3/contact"><i class="icon-comment icon-white" style="margin: 3px 8px;"></i> Contact Us</a>
 				</li>
-				<li class="divider-vertical"></li>
-				<li><a href="/?page_id=77"><i class="icon-bookmark icon-white" style="margin: 2px 8px;"></i> Portfolio</a></li>
-				<li class="divider-vertical"></li>
-				<!--<li><a href="/?page_id=840"><i class="icon-tasks icon-white" style="margin: 2px 8px;"></i> Blog</a></li>
-				<li class="divider-vertical"></li>-->
-				<li><a href="/?page_id=540" style="background: #555; color: #fff;"><i class="icon-gift icon-white" style="margin: 2px 10px;"></i> Get a Free Quote</a></li>
-				<li class="divider-vertical"></li>
 			</ul>
-			<img src="http://fiatinsight.com/wp-content/uploads/logos/fiat-circle-logo.png" style="float:right; margin-top: 5px; opacity: .7;" height="28px">
+			<div class="hidden-tablet hidden-small" style="float:right; margin-top:4px">
+
+<a href="https://www.facebook.com/CHNetwork"><img height="25px" style="margin: 3px 3px 0; opacity: .8;" src="../wp-content/uploads/2013/07/facebook.png"></a>
+<a href="https://twitter.com/CHNetwork"><img height="25px" style=" margin: 3px 3px 0; opacity: .8;" src="../wp-content/uploads/2013/07/twitter.png"></a>
+<a href="https://plus.google.com/u/0/111505243208314499192/posts"><img height="25px" style=" margin: 3px 3px 0; opacity: .8;" src="../wp-content/uploads/2013/07/googleplus.png"></a>
+<a href="http://pinterest.com/chnetwork/"><img height="25px" style=" margin: 3px 3px 0; opacity: .8;" src="../wp-content/uploads/2013/07/pinterest.png"></a>
+<a href="/feed/"><img height="25px" style="margin: 3px 3px 0; opacity: .8;" src="../wp-content/uploads/2013/07/rss.png"></a>
+
+</div>
 		</div>
 	</div>
 </div>

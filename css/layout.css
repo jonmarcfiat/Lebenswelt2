@@ -12,7 +12,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 /*** Body ***/
 
 	body {
-		background: #fff url('/wp-content/uploads/bgs/damask-bg-white.pngx') top center no-repeat fixed;
+		background: #fff url('') top center no-repeat fixed;
 		font-size:13px;
 		line-height:1.6em;
 		font-family:georgia, times, serif;
@@ -31,14 +31,14 @@ Description: Body, header, footer, sidebars, widgets, etc
 /*** Header ***/
 
 	#header {
-		background-image: url('/wp-content/uploads/bgs/brick-wall.jpg');
+		background-color:white;
 		background-size: 100%;
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		margin: 0 auto;
+		margin: 0 auto 0px auto;
 		border-bottom: 3px solid #555;
-		box-shadow: 0 0 45px #999;
+		box-shadow: 0px 0px 15px #444444;
 		}
 
 	#header .content {
@@ -57,7 +57,7 @@ Description: Body, header, footer, sidebars, widgets, etc
 
 	.headline {
 		color:#000;
-		padding: 0px 0px;
+		padding: 10px 0px;
 		opacity: 1;
 		}
 
@@ -113,9 +113,11 @@ Description: Body, header, footer, sidebars, widgets, etc
 		}
 
 	#footer  {
-		background: transparent url('/wp-content/uploads/2013/08/footer-matte.png') top left repeat;
+		background:#6D2419;
 		padding: 10px 0 1.5em;
-		box-shadow: 0 0 45px #bbb;
+		box-shadow: 0px 0 10px #bbb;
+		position: relative;
+   		 z-index: 10;
 		}
 
 	#fcolumns_container{
@@ -174,9 +176,10 @@ Description: Body, header, footer, sidebars, widgets, etc
 	.page-template-page-fullwidth-php #content {background:#fff;}
 
 	#contentcontainer {
-		background: transparent url('') bottom right no-repeat;
-		}
-	
+		background-color: white;
+    box-shadow: 0 0 15px #999999;
+    margin-top: 25px;
+	}
 	#maincontent {
 		float: left;
 		width:;
@@ -208,6 +211,11 @@ Description: Body, header, footer, sidebars, widgets, etc
 		z-index: 4000;
 		}
 
+#newsbox {background:white;width:1000px;margin:10px auto 20px;padding:30px;}
+
+.post-content { 
+	
+}
 
 /*** Sidebar ***/
 

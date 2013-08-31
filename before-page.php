@@ -15,8 +15,8 @@
 	if (is_front_page())
 		get_template_part('entities/brand');
 	
-	if (is_page('strategy'))
-		get_template_part('entities/sliderStrategy');
+	if (is_page('portfolio'))
+		get_template_part('entities/homepage');
 	
 	if (is_page('portfolio'))
 		get_template_part('entities/portfolio');

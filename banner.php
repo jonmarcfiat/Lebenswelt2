@@ -1,6 +1,6 @@
 <div id="header" class="fix container-fluid">
 	<div id="wrapper"><!-- Header wrapper -->
-				<div class="content fix span8 borderbox">
+				<div class="content fix span6 borderbox">
 
 					<div class="headline">
 						<?php if(lebenswelt('custom_header')):?>
@@ -13,14 +13,29 @@
 
 				</div><!-- end span -->
 
-				<div class="span4 borderbox hidden-phone">
-					<ul class="hugenav hidden-phone" style="float:right;">
-						<li><a href="/join">Join</a></li>
-						<li><a href="/donate">Donate</a></li>
-					</ul>
+				<div class="span6 borderbox" style="margin:0px auto 0px">
+				<div style="padding: 60px 20px 30px;  min-width:257px; text-align:center">
+					<p>We are a network of inquirers, converts, and reverts to the Catholic Church, as well as life-long Catholics on a journey of continual conversion to Jesus Christ.   </p>
+					 <a class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+					Explore
+						<span class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+							<!-- dropdown menu links -->
+							</ul>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Join &raquo;</button></a>
+					<a href="#" target="new"><button class="btn btn-large btn-info" style="margin-left:10px"><i class="icon-user icon-white"></i> Donate &raquo;</button></a>
+					
+			</div>
+                
+					
 				</div>
 				<!--
 				<div class="hidden-small hidden-tablet hidden-phone content fix span8">
+                <ul class="hugenav hidden-phone" style="float:right;">
+						<li><a href="/join">Join</a></li>
+						<li><a href="/donate">Donate</a></li>
+					</ul>
 					<ul class="ch-grid">
 						<li></li>
 						<li></li>
